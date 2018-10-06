@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		AD2409BB2169376900BEF7CB /* Valley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2409B12169376900BEF7CB /* Valley.framework */; };
-		AD2409C02169376900BEF7CB /* ValleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409BF2169376900BEF7CB /* ValleyTests.swift */; };
+		AD2409C02169376900BEF7CB /* ValleyCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409BF2169376900BEF7CB /* ValleyCacheTests.swift */; };
 		AD2409C22169376900BEF7CB /* Valley.h in Headers */ = {isa = PBXBuildFile; fileRef = AD2409B42169376900BEF7CB /* Valley.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD2409D92169396400BEF7CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409D82169396400BEF7CB /* AppDelegate.swift */; };
 		AD2409DB2169396400BEF7CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409DA2169396400BEF7CB /* ViewController.swift */; };
 		AD2409DE2169396400BEF7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2409DC2169396400BEF7CB /* Main.storyboard */; };
 		AD2409E02169396500BEF7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2409DF2169396500BEF7CB /* Assets.xcassets */; };
 		AD2409E32169396500BEF7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2409E12169396500BEF7CB /* LaunchScreen.storyboard */; };
+		AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409E921694B2700BEF7CB /* ValleyCache.swift */; };
+		AD2409ED21694B3700BEF7CB /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409EC21694B3600BEF7CB /* DoublyLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,7 @@
 		AD2409B42169376900BEF7CB /* Valley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valley.h; sourceTree = "<group>"; };
 		AD2409B52169376900BEF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD2409BA2169376900BEF7CB /* ValleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD2409BF2169376900BEF7CB /* ValleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyTests.swift; sourceTree = "<group>"; };
+		AD2409BF2169376900BEF7CB /* ValleyCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyCacheTests.swift; sourceTree = "<group>"; };
 		AD2409C12169376900BEF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD2409D62169396400BEF7CB /* ValleyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValleyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2409D82169396400BEF7CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,8 @@
 		AD2409DF2169396500BEF7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD2409E22169396500BEF7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD2409E42169396500BEF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD2409E921694B2700BEF7CB /* ValleyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyCache.swift; sourceTree = "<group>"; };
+		AD2409EC21694B3600BEF7CB /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				AD2409CB216937B500BEF7CB /* Application */,
+				AD2409EB21694B3600BEF7CB /* Utils */,
+				AD2409E821694AEB00BEF7CB /* Source */,
 			);
 			path = Valley;
 			sourceTree = "<group>";
@@ -100,7 +106,7 @@
 		AD2409BE2169376900BEF7CB /* ValleyTests */ = {
 			isa = PBXGroup;
 			children = (
-				AD2409BF2169376900BEF7CB /* ValleyTests.swift */,
+				AD2409BF2169376900BEF7CB /* ValleyCacheTests.swift */,
 				AD2409C12169376900BEF7CB /* Info.plist */,
 			);
 			path = ValleyTests;
@@ -126,6 +132,22 @@
 				AD2409E42169396500BEF7CB /* Info.plist */,
 			);
 			path = ValleyDemo;
+			sourceTree = "<group>";
+		};
+		AD2409E821694AEB00BEF7CB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AD2409E921694B2700BEF7CB /* ValleyCache.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AD2409EB21694B3600BEF7CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD2409EC21694B3600BEF7CB /* DoublyLinkedList.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +229,7 @@
 				TargetAttributes = {
 					AD2409B02169376900BEF7CB = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					AD2409B92169376900BEF7CB = {
 						CreatedOnToolsVersion = 10.0;
@@ -268,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */,
+				AD2409ED21694B3700BEF7CB /* DoublyLinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2409C02169376900BEF7CB /* ValleyTests.swift in Sources */,
+				AD2409C02169376900BEF7CB /* ValleyCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +468,7 @@
 		AD2409C62169376900BEF7CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -460,6 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.Valley;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +495,7 @@
 		AD2409C72169376900BEF7CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -493,6 +521,7 @@
 		AD2409C92169376900BEF7CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
 				INFOPLIST_FILE = ValleyTests/Info.plist;
@@ -511,6 +540,7 @@
 		AD2409CA2169376900BEF7CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
 				INFOPLIST_FILE = ValleyTests/Info.plist;
