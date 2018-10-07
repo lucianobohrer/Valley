@@ -5,21 +5,26 @@
 //  Created by Luciano Bohrer on 06/10/18.
 //  Copyright © 2018 Luciano Bohrer. All rights reserved.
 //
+import Foundation
 
 // MARK: - Class
 final internal class ValleyCache {
     
+    // MARK: Internal variables
+    internal var capacity: Int
+    
     // MARK: Private variables
-    private let capacity: Int
     private var availableStorage: Int
     private let list = DoublyLinkedList<ValleyPayload>()
     private var nodesDict = [String: DoublyLinkedListNode<ValleyPayload>]()
     
+    // MARK: Initializers
     init(capacity: Int) {
         self.capacity = max(0, capacity)
         self.availableStorage = self.capacity
     }
     
+    // MARK: Internal methods
     func setValue(_ value: Any, for key: String, cost: Int) {
         let payload = ValleyPayload(key: key, value: value, cost: cost)
         
@@ -44,11 +49,15 @@ final internal class ValleyCache {
         }
     }
     
+    // MARK: Internal methods
     func getValue(for key: String) -> Any? {
         guard let node = nodesDict[key] else { return nil }
-        
         list.moveToHead(node)
         return node.payload.value
+    }
+    
+    @objc private func clearCache() {
+        list.flush()
     }
 }
 

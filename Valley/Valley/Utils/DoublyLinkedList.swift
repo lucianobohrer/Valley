@@ -1,11 +1,3 @@
-//
-//  DoublyLinkedList.swift
-//  Valley
-//
-//  Created by Luciano Bohrer on 06/10/18.
-//  Copyright © 2018 Luciano Bohrer. All rights reserved.
-//
-
 typealias DoublyLinkedListNode<T> = DoublyLinkedList<T>.Node<T>
 
 final class DoublyLinkedList<T> {
@@ -76,5 +68,14 @@ final class DoublyLinkedList<T> {
         count -= 1
         
         return tail
+    }
+    
+    /**
+     Clear all items
+     */
+    func flush() {
+        while count > 0 {
+          _ = self.removeLast()
+        }
     }
 }
