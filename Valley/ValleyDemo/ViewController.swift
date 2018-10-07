@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         let width = (self.view.frame.size.width - 20) / 2
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
+        Valley.setup(capacityInBytes: 20 * 1024 * 1024)
     }
 }
 
@@ -58,10 +59,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
                 return UICollectionViewCell()
         }
         
-
         cell.imageView.valleyImage(url: source[indexPath.row],
-                                   placeHolder: UIImage(named: "placeholder"))
-    
+                                   placeholder: UIImage(named: "placeholder"))
+
         return cell
     }
     

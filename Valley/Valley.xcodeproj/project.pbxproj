@@ -131,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				AD2409CB216937B500BEF7CB /* Application */,
-				AD2409EB21694B3600BEF7CB /* Utils */,
 				AD2409E821694AEB00BEF7CB /* Source */,
+				AD2409EB21694B3600BEF7CB /* Utils */,
 			);
 			path = Valley;
 			sourceTree = "<group>";

@@ -15,21 +15,29 @@ import Foundation
 // MARK: - Class
 final class ValleyDownloader {
     
+    // MARK: Error definitions
+    enum Error: String, Swift.Error {
+        case generic = "Unexpected error ocurred"
+        case invalidUrl = "Error parsing string url"
+    }
+    
     // MARK: Static methods
     
     /**
-     Download method for any kind of file returning the URLSessionTask to control the request
+     Download method for any kind of file returning the URLSessionTask to control the request if needed
      */
     @discardableResult
-    static func download(urlString: String, completion: @escaping (Data) -> (Void)) -> URLSessionTask? {
+    static func downloadTask(urlString: String,
+                             onError: ((Error?) -> (Void))? = nil,
+                             completion: @escaping (Data) -> (Void)) -> URLSessionTask? {
         guard let url = URL(string: urlString) else {
-            debugPrint("VALLEY: INVALID URL")
+            onError?(.invalidUrl)
             return nil
         }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
             guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "Generic Error Downloading Image")
+                onError?(.generic)
                 return
             }
             completion(data)

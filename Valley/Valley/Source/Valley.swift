@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Class
-public class Valley {
+final public class Valley {
     
     // MARK: Static variables
     
