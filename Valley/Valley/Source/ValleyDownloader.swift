@@ -24,25 +24,25 @@ final class ValleyDownloader<T> {
     
     @discardableResult
     static func request(urlString: String,
-                               onError: @escaping (ValleyError?) -> (Void) = { _ in },
-                               completion: @escaping (T) -> (Void)) -> URLSessionTask? {
+                               onError: ((ValleyError?) -> Void)? = nil,
+                               completion: ((T) -> Void)? = nil) -> URLSessionTask? {
         
         guard let url = URL(string: urlString) else {
-            onError(.invalidUrl)
+            onError?(.invalidUrl)
             return nil
         }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
             guard let data = data, error == nil else {
-                onError(.generic)
+                onError?(.generic)
                 return
             }
             
             if let parsedData = self.parseData(data: data) {
-                completion(parsedData)
+                completion?(parsedData)
                 return
             } else {
-                onError(.parsingError)
+                onError?(.invalidParse)
             }
         }
         return task
@@ -69,6 +69,7 @@ final class ValleyDownloader<T> {
 // MARK: Errors definition
 public enum ValleyError: String, Swift.Error {
     case generic = "Unexpected error ocurred"
-    case parsingError = "Error parsing data to file type"
+    case invalidParse = "Error parsing data to file type"
     case invalidUrl = "Error parsing string url"
 }
+

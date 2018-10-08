@@ -43,7 +43,9 @@ class ValleyCacheTests: XCTestCase {
         
         XCTAssertNotNil(Valley.cache.getValue(for: "id1"))
         XCTAssertNotNil(Valley.cache.getValue(for: "id2"))
+        
         Valley.cache.clearCache()
+        
         XCTAssertNil(Valley.cache.getValue(for: "id1"))
         XCTAssertNil(Valley.cache.getValue(for: "id2"))
     }

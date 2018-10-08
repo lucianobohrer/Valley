@@ -29,8 +29,10 @@ public extension UIImageView {
     public func valleyImage(url urlString: String,
                             placeholder: UIImage? = nil,
                             option: AnimationOptions? = .transitionCrossDissolve,
-                            onError: @escaping ((ValleyError?) -> (Void)) = { _ in }) -> URLSessionTask? {
+                            onSuccess: ((UIImage) -> Void)? = nil,
+                            onError: ((ValleyError?) -> Void)? = nil) -> URLSessionTask? {
         self.image = placeholder
+        
         if let value = Valley.cache.getValue(for: urlString.appending("\(self.bounds.size.width)")) as? Data, let img = UIImage(data: value) {
             UIView.transition(with: self,
                               duration: 0.3,
@@ -42,24 +44,29 @@ public extension UIImageView {
             return nil
         }
         
-        let task = ValleyDownloader<UIImage>.request(urlString: urlString,
-                                             onError: onError) { [weak self] (image) -> (Void) in
-            guard let `self` = self else { return }
-            DispatchQueue.main.async {
-                let resizedImage = image.resize(withWidth: self.bounds.size.width)
-                if let dataResized = resizedImage.jpegData(compressionQuality: 1.0) {
-                    Valley.cache.setValue(dataResized,
-                                          for: urlString.appending("\(self.bounds.size.width)"),
-                                          cost: dataResized.count)
-                    UIView.transition(with: self,
-                                      duration: 0.3,
-                                      options: .transitionCrossDissolve,
-                                      animations: {
-                                        self.image = resizedImage
-                                        
-                    }, completion: nil)
-                }
-            }
+        let task = ValleyDownloader<UIImage>
+            .request(urlString: urlString,
+                     onError: onError) { [weak self] (image) -> (Void) in
+                        guard let `self` = self else {
+                            onError?(.generic)
+                            return
+                        }
+                        
+                        DispatchQueue.main.async {
+                            let resizedImage = image.resize(withWidth: self.bounds.size.width)
+                            if let dataResized = resizedImage.jpegData(compressionQuality: 1.0) {
+                                Valley.cache.setValue(dataResized,
+                                                      for: urlString.appending("\(self.bounds.size.width)"),
+                                                      cost: dataResized.count)
+                                UIView.transition(with: self,
+                                                  duration: 0.3,
+                                                  options: .transitionCrossDissolve,
+                                                  animations: {
+                                                    self.image = resizedImage
+                                                  }, completion: nil)
+                                onSuccess?(resizedImage)
+                            }
+                        }
         }
         defer {
             task?.resume()
