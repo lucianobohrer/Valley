@@ -26,6 +26,17 @@ class ValleyCacheTests: XCTestCase {
         XCTAssertNotNil(cache?.getValue(for: "id2"))
     }
     
+    func testClearCache() {
+        self.cache?.setValue("teste", for: "id1", cost: 10)
+        self.cache?.setValue("teste", for: "id2", cost: 30)
+        
+        XCTAssertNotNil(cache?.getValue(for: "id1"))
+        XCTAssertNotNil(cache?.getValue(for: "id2"))
+        self.cache?.clearCache()
+        XCTAssertNil(cache?.getValue(for: "id1"))
+        XCTAssertNil(cache?.getValue(for: "id2"))
+    }
+    
     func testPerformanceLinkedList() {
         // This is an example of a performance test case.
         self.measure {

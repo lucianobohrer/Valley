@@ -42,6 +42,10 @@ class ViewController: UIViewController {
                     onError: { error in
                         print(error?.localizedDescription ?? "")
                     })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            Valley.cache.clearCache()
+        }
     }
 }
 

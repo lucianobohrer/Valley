@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Class
-final internal class ValleyCache {
+final public class ValleyCache {
     
     // MARK: Internal variables
     internal var capacity: Int
@@ -56,8 +56,9 @@ final internal class ValleyCache {
         return node.payload.value
     }
     
-    @objc private func clearCache() {
-        list.flush()
+    @objc public func clearCache() {
+        self.list.removeAll()
+        self.nodesDict.removeAll()
     }
 }
 

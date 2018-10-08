@@ -70,12 +70,9 @@ final class DoublyLinkedList<T> {
         return tail
     }
     
-    /**
-     Clear all items
-     */
-    func flush() {
-        while count > 0 {
-          _ = self.removeLast()
+    func removeAll() {
+        while self.tail != nil {
+            _ = removeLast()
         }
     }
 }

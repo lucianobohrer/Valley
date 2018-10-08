@@ -11,7 +11,7 @@ final public class Valley {
     
     // MARK: Static variables
     
-    internal static var cache: ValleyCache = ValleyCache(capacity: 20 * 1024 * 1024)
+    public static private(set) var cache: ValleyCache = ValleyCache(capacity: 20 * 1024 * 1024)
     
     // MARK: Static setup
 
