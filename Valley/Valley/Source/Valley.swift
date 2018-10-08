@@ -12,7 +12,7 @@ final public class Valley {
     // MARK: Static variables
     
     public static private(set) var cache: ValleyCache = ValleyCache(capacity: 20 * 1024 * 1024)
-    
+    internal static var testing: Bool = false
     // MARK: Static setup
 
     /**
@@ -20,5 +20,13 @@ final public class Valley {
      */
     public static func setup(capacityInBytes: Int) {
         self.cache.capacity = capacityInBytes
+    }
+    
+    internal static func setup(capacityInBytes: Int, testing: Bool) {
+        self.cache.capacity = capacityInBytes
+        if testing {
+            self.cache = ValleyCache(capacity: capacityInBytes)
+            self.testing = testing
+        }
     }
 }

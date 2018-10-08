@@ -11,56 +11,55 @@ import XCTest
 
 class ValleyCacheTests: XCTestCase {
     
-    var cache: ValleyCache?
-    
     override func setUp() {
-        self.cache = ValleyCache(capacity: 100)
+        Valley.setup(capacityInBytes: 100,
+                     testing: true)
     }
     
     func testBasicCacheStorage() {
         
-        self.cache?.setValue("teste", for: "id1", cost: 10)
-        self.cache?.setValue("teste", for: "id2", cost: 30)
+        Valley.cache.setValue("teste", for: "id1", cost: 10)
+        Valley.cache.setValue("teste", for: "id2", cost: 30)
         
-        XCTAssertNotNil(cache?.getValue(for: "id1"))
-        XCTAssertNotNil(cache?.getValue(for: "id2"))
+        XCTAssertNotNil(Valley.cache.getValue(for: "id1"))
+        XCTAssertNotNil(Valley.cache.getValue(for: "id2"))
     }
     
     func testCacheEviction() {
         
-        self.cache?.setValue("teste", for: "id1", cost: 90)
-        self.cache?.setValue("teste", for: "id2", cost: 10)
+        Valley.cache.setValue("teste", for: "id1", cost: 90)
+        Valley.cache.setValue("teste", for: "id2", cost: 10)
         
-        XCTAssertNotNil(cache?.getValue(for: "id1"))
+        XCTAssertNotNil(Valley.cache.getValue(for: "id1"))
         
-        self.cache?.setValue("teste", for: "id3", cost: 20)
-        XCTAssertNil(cache?.getValue(for: "id2"))
+        Valley.cache.setValue("teste", for: "id3", cost: 20)
+        XCTAssertNil(Valley.cache.getValue(for: "id2"))
 
     }
     
     func testClearCache() {
-        self.cache?.setValue("teste", for: "id1", cost: 10)
-        self.cache?.setValue("teste", for: "id2", cost: 30)
+        Valley.cache.setValue("teste", for: "id1", cost: 10)
+        Valley.cache.setValue("teste", for: "id2", cost: 30)
         
-        XCTAssertNotNil(cache?.getValue(for: "id1"))
-        XCTAssertNotNil(cache?.getValue(for: "id2"))
-        self.cache?.clearCache()
-        XCTAssertNil(cache?.getValue(for: "id1"))
-        XCTAssertNil(cache?.getValue(for: "id2"))
+        XCTAssertNotNil(Valley.cache.getValue(for: "id1"))
+        XCTAssertNotNil(Valley.cache.getValue(for: "id2"))
+        Valley.cache.clearCache()
+        XCTAssertNil(Valley.cache.getValue(for: "id1"))
+        XCTAssertNil(Valley.cache.getValue(for: "id2"))
     }
     
     func testPerformanceLinkedList() {
         // This is an example of a performance test case.
         self.measure {
-            self.cache?.setValue("test", for: "id1", cost: 10)
-            self.cache?.setValue("test", for: "id2", cost: 10)
-            self.cache?.setValue("test", for: "id3", cost: 10)
-            self.cache?.setValue("test", for: "id4", cost: 10)
-            self.cache?.setValue("test", for: "id5", cost: 10)
+            Valley.cache.setValue("test", for: "id1", cost: 10)
+            Valley.cache.setValue("test", for: "id2", cost: 10)
+            Valley.cache.setValue("test", for: "id3", cost: 10)
+            Valley.cache.setValue("test", for: "id4", cost: 10)
+            Valley.cache.setValue("test", for: "id5", cost: 10)
             
-            _ = self.cache?.getValue(for: "id3")
-            _ = self.cache?.getValue(for: "id1")
-            _ = self.cache?.getValue(for: "id5")
+            _ = Valley.cache.getValue(for: "id3")
+            _ = Valley.cache.getValue(for: "id1")
+            _ = Valley.cache.getValue(for: "id5")
         }
     }
     
