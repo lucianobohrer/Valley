@@ -21,20 +21,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private let source = ["https://upload.wikimedia.org/wikipedia/commons/8/8b/Ft5_3mb.JPG",
-                        "https://upload.wikimedia.org/wikipedia/commons/a/a3/GNR_London_Stadium_2017_3_%28cropped%29.jpg",
-                        "https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                        "https://images.pexels.com/photos/92658/pexels-photo-92658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                        "https://images.pexels.com/photos/268633/pexels-photo-268633.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260G",
-                        "https://images.pexels.com/photos/355749/pexels-photo-355749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                        "https://images.pexels.com/photos/315999/pexels-photo-315999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                        "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                        "https://upload.wikimedia.org/wikipedia/commons/8/8b/Ft5_3mb.JPG",
-                        "https://upload.wikimedia.org/wikipedia/commons/a/a3/GNR_London_Stadium_2017_3_%28cropped%29.jpg",
-                        "https://upload.wikimedia.org/wikipedia/commons/8/8b/Ft5_3mb.JPG",
-                        "https://upload.wikimedia.org/wikipedia/commons/a/a3/GNR_London_Stadium_2017_3_%28cropped%29.jpg",
-                        "https://upload.wikimedia.org/wikipedia/commons/8/8b/Ft5_3mb.JPG",
-                        "https://upload.wikimedia.org/wikipedia/commons/a/a3/GNR_London_Stadium_2017_3_%28cropped%29.jpg"]
+    private var source: [[String: Any]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +30,18 @@ class ViewController: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
         Valley.setup(capacityInBytes: 20 * 1024 * 1024)
+        
+        ValleyJSON<[[String: Any]]>
+            .request(url: "https://pastebin.com/raw/wgkJgazE",
+                     completion: { (source) -> (Void) in
+                        self.source = source
+                        DispatchQueue.main.async {
+                            self.collectionView.reloadData()
+                        }
+                     },
+                    onError: { error in
+                        print(error?.localizedDescription ?? "")
+                    })
     }
 }
 
@@ -59,9 +58,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
                 return UICollectionViewCell()
         }
         
-        cell.imageView.valleyImage(url: source[indexPath.row],
-                                   placeholder: UIImage(named: "placeholder"))
+        if  let urls = source[indexPath.row]["urls"] as? [String: Any],
+            let small = urls["small"] as? String {
+        
+            cell.imageView.valleyImage(url: small,
+                                       placeholder: UIImage(named: "placeholder"))
 
+        }
         return cell
     }
     

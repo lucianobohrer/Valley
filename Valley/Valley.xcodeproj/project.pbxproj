@@ -18,12 +18,14 @@
 		AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409E921694B2700BEF7CB /* ValleyCache.swift */; };
 		AD2409ED21694B3700BEF7CB /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409EC21694B3600BEF7CB /* DoublyLinkedList.swift */; };
 		AD2409EF2169526000BEF7CB /* ValleyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */; };
-		AD2409F1216952C900BEF7CB /* ValleyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409F0216952C900BEF7CB /* ValleyImageView.swift */; };
+		AD2409F1216952C900BEF7CB /* UIImageView+Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */; };
 		AD2409F3216953A500BEF7CB /* Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409F2216953A500BEF7CB /* Valley.swift */; };
 		AD2409F82169590400BEF7CB /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2409F62169590300BEF7CB /* CardCollectionViewCell.xib */; };
 		AD2409F92169590400BEF7CB /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409F72169590300BEF7CB /* CardCollectionViewCell.swift */; };
 		AD2409FA2169692100BEF7CB /* Valley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2409B12169376900BEF7CB /* Valley.framework */; };
 		AD2409FB2169692100BEF7CB /* Valley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD2409B12169376900BEF7CB /* Valley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ADE7FD35216B0AA7003E1368 /* Data+Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7FD34216B0AA7003E1368 /* Data+Valley.swift */; };
+		ADE7FD37216B1995003E1368 /* ValleyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7FD36216B1995003E1368 /* ValleyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +76,12 @@
 		AD2409E921694B2700BEF7CB /* ValleyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyCache.swift; sourceTree = "<group>"; };
 		AD2409EC21694B3600BEF7CB /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyDownloader.swift; sourceTree = "<group>"; };
-		AD2409F0216952C900BEF7CB /* ValleyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyImageView.swift; sourceTree = "<group>"; };
+		AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Valley.swift"; sourceTree = "<group>"; };
 		AD2409F2216953A500BEF7CB /* Valley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valley.swift; sourceTree = "<group>"; };
 		AD2409F62169590300BEF7CB /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		AD2409F72169590300BEF7CB /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADE7FD34216B0AA7003E1368 /* Data+Valley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Valley.swift"; sourceTree = "<group>"; };
+		ADE7FD36216B1995003E1368 /* ValleyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +179,9 @@
 			children = (
 				AD2409F2216953A500BEF7CB /* Valley.swift */,
 				AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */,
-				AD2409F0216952C900BEF7CB /* ValleyImageView.swift */,
+				AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */,
+				ADE7FD34216B0AA7003E1368 /* Data+Valley.swift */,
+				ADE7FD36216B1995003E1368 /* ValleyJSON.swift */,
 				AD2409E921694B2700BEF7CB /* ValleyCache.swift */,
 			);
 			path = Source;
@@ -335,9 +341,11 @@
 			files = (
 				AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */,
 				AD2409F3216953A500BEF7CB /* Valley.swift in Sources */,
+				ADE7FD35216B0AA7003E1368 /* Data+Valley.swift in Sources */,
 				AD2409EF2169526000BEF7CB /* ValleyDownloader.swift in Sources */,
 				AD2409ED21694B3700BEF7CB /* DoublyLinkedList.swift in Sources */,
-				AD2409F1216952C900BEF7CB /* ValleyImageView.swift in Sources */,
+				AD2409F1216952C900BEF7CB /* UIImageView+Valley.swift in Sources */,
+				ADE7FD37216B1995003E1368 /* ValleyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

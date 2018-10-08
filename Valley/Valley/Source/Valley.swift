@@ -6,8 +6,6 @@
 //  Copyright © 2018 Luciano Bohrer. All rights reserved.
 //
 
-import Foundation
-
 // MARK: - Class
 final public class Valley {
     
