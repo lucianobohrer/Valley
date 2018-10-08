@@ -14,14 +14,12 @@ final public class ValleyCache {
     internal var capacity: Int
     
     // MARK: Private variables
-    private var availableStorage: Int
     private let list = DoublyLinkedList<ValleyPayload>()
     private var nodesDict = [String: DoublyLinkedListNode<ValleyPayload>]()
     
     // MARK: Initializers
     init(capacity: Int) {
         self.capacity = max(0, capacity)
-        self.availableStorage = self.capacity
     }
     
     // MARK: Internal methods
@@ -30,19 +28,19 @@ final public class ValleyCache {
         
         if let node = nodesDict[key] {
             node.payload = payload
-            list.moveToHead(node)
+            self.list.moveToHead(node)
         } else {
-            while availableStorage < cost, list.count > 0 {
-                if  let removedNode = list.removeLast() {
-                    self.availableStorage = max(0, self.availableStorage + removedNode.payload.cost)
+            while self.availableStorage() < cost, nodesDict.count > 0 {
+                if  let removedNode = self.list.removeLast() {
                     nodesDict[removedNode.payload.key] = nil
+                } else if self.nodesDict.count == 1 {
+                    nodesDict.removeAll()
                 }
             }
-            
-            if availableStorage >= cost {
+            let available = self.availableStorage()
+            if available > 0 && available >= cost {
                 let node = list.addHead(payload)
                 nodesDict[key] = node
-                self.availableStorage -= cost
             } else {
                 debugPrint("VALLEY: INSUFFICIENT MEMORY SPACE")
             }
@@ -54,6 +52,11 @@ final public class ValleyCache {
         guard let node = nodesDict[key] else { return nil }
         list.moveToHead(node)
         return node.payload.value
+    }
+    
+    // MARK: Private methods
+    func availableStorage() -> Int {
+        return max(0, (self.capacity - self.nodesDict.compactMap({ $0.value.payload.cost }).reduce(0, +)))
     }
     
     @objc public func clearCache() {
