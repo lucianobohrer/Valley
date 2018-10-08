@@ -26,6 +26,18 @@ class ValleyCacheTests: XCTestCase {
         XCTAssertNotNil(cache?.getValue(for: "id2"))
     }
     
+    func testCacheEviction() {
+        
+        self.cache?.setValue("teste", for: "id1", cost: 90)
+        self.cache?.setValue("teste", for: "id2", cost: 10)
+        
+        XCTAssertNotNil(cache?.getValue(for: "id1"))
+        
+        self.cache?.setValue("teste", for: "id3", cost: 20)
+        XCTAssertNil(cache?.getValue(for: "id2"))
+
+    }
+    
     func testClearCache() {
         self.cache?.setValue("teste", for: "id1", cost: 10)
         self.cache?.setValue("teste", for: "id2", cost: 30)

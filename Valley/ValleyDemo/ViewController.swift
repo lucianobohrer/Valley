@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let width = (self.view.frame.size.width - 20) / 2
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
-        Valley.setup(capacityInBytes: 20 * 1024 * 1024)
+        Valley.setup(capacityInBytes: 4 * 1024 * 1024)
         
         ValleyJSON<[[String: Any]]>
             .request(url: "https://pastebin.com/raw/wgkJgazE",
