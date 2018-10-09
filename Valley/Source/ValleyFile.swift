@@ -1,12 +1,12 @@
 //
-//  ValleyJSON.swift
+//  ValleyFile.swift
 //  Valley
 //
 //  Created by Luciano Bohrer on 08/10/18.
 //  Copyright © 2018 Luciano Bohrer. All rights reserved.
 //
 
-public class ValleyJSON<T> {
+public class ValleyFile<T> {
 
     // MARK: Internal methods
     /**
@@ -26,10 +26,10 @@ public class ValleyJSON<T> {
         
         let task = ValleyDownloader<T>
             .request(urlString: urlString,
-                     onError: onError) { (json) -> (Void) in
+                     onError: onError) { (file) -> (Void) in
                         DispatchQueue.main.async {
-                            Valley.cache.add(json, for: urlString, cost: malloc_size(json as? UnsafeRawPointer))
-                            completion(json)
+                            Valley.cache.add(file, for: urlString, cost: MemoryLayout.size(ofValue: file))
+                            completion(file)
                         }
         }
         

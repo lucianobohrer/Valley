@@ -1,5 +1,5 @@
 PODS:
-  - Valley (1.0.0)
+  - Valley (1.1.0)
 
 DEPENDENCIES:
   - Valley (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Valley: 9b329cf5a4faecba486442ea19d5747c0fe2cc2d
+  Valley: de72ab473efbff15732fe032663cbd5d4cac6eb3
 
 PODFILE CHECKSUM: cc9d5f27e265fec7358a6bb36596dc908987c3a6
 

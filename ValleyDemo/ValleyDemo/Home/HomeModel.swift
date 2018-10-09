@@ -21,7 +21,7 @@ class HomeModel: NSObject {
     
     // MARK: Internal methods
     func refreshData(page: Int) {
-        ValleyJSON<[[String: Any]]>.request(url: Endpoints.home.rawValue, completion: { [weak self] (items) -> (Void) in
+        ValleyFile<[[String: Any]]>.request(url: Endpoints.home.rawValue, completion: { [weak self] (items) -> (Void) in
             
             for item in items {
                 if  let urls = item["urls"] as? [String: Any],

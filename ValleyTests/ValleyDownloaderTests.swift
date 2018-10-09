@@ -39,7 +39,7 @@ class ValleyDownloaderTests: XCTestCase {
         let url = bundle.url(forResource: "json-sample",
                              withExtension: "json")?.absoluteString ?? ""
         
-        ValleyJSON<[[String: Any]]>.request(url: url, completion: { (items) -> (Void) in
+        ValleyFile<[[String: Any]]>.request(url: url, completion: { (items) -> (Void) in
             XCTAssertTrue(items.count > 0)
             expectation.fulfill()
         })
@@ -51,7 +51,7 @@ class ValleyDownloaderTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for Data")
         let url = bundle.url(forResource: "image-sample",
                              withExtension: "jpeg")?.absoluteString ?? ""
-        Data.valleyData(url: url, completion: { (data) -> (Void) in
+        ValleyFile<Data>.request(url: url, completion: { (data) -> (Void) in
             XCTAssertNotNil(data)
             expectation.fulfill()
         })
