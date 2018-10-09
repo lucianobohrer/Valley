@@ -27,10 +27,13 @@ pod 'Valley'
 ```Swift
 imageView.valleyImage(url: "https://yourwebseite.com/img.jpeg")
 ```
-3. To download other kind of files for example(there'll be some changes soon, merging both approaches):
+3. To download other kind of files for example:
 ```Swift
-ValleyJSON<[[String: Any]]>.request(url: "https://yourwebsite.com/data.json") { (json) in }
-Data.request(url: "https://yourwebsite.com/data.json") { (data) in }
+// JSON
+ValleyFile<[[String: Any]]>.request(url: "https://yourwebsite.com/data.json") { (json) in }
+
+// Data to fill a webview with a PDF
+ValleyFile<Data>.request(url: "https://yourwebsite.com/myfile.pdf") { (data) in }
 ```
 ## Canceling download
 
