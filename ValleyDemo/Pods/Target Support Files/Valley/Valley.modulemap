@@ -1,0 +1,6 @@
+framework module Valley {
+  umbrella header "Valley-umbrella.h"
+
+  export *
+  module * { export * }
+}

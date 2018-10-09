@@ -1,0 +1,16 @@
+PODS:
+  - Valley (1.0.0)
+
+DEPENDENCIES:
+  - Valley (from `../`)
+
+EXTERNAL SOURCES:
+  Valley:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Valley: 9b329cf5a4faecba486442ea19d5747c0fe2cc2d
+
+PODFILE CHECKSUM: cc9d5f27e265fec7358a6bb36596dc908987c3a6
+
+COCOAPODS: 1.5.3

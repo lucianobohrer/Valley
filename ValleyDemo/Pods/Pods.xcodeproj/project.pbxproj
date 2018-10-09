@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		030DDB801957C98FA1C067AC75BF57C1 /* Data+Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D1F340ED7C6F6E8FCC0C5766E43A46 /* Data+Valley.swift */; };
+		30F40185E6846979CBE20A125EBA4B10 /* Pods-ValleyDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A8746F81872101254E88CB28EE23EF /* Pods-ValleyDemo-dummy.m */; };
+		59812983C8CD7EA41C450BE246AAE9FA /* ValleyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321CF8D9869E199116234E142203F35 /* ValleyJSON.swift */; };
+		5B411937871244446951F71F236D7B23 /* Pods-ValleyDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB754258E00B18692FA482F0AE9505F9 /* Pods-ValleyDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7379F44541CF9192ADE49A2A1F9C0A7A /* ValleyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E67500958980535F8C0D8B22FC290 /* ValleyCache.swift */; };
+		7DAC6B6F9C17BA123A7D502DE08ECA7D /* Valley-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 674528820D00BBD482474108B33DEC8C /* Valley-dummy.m */; };
+		8FCA74C4751CBD760E33A8A4F9A8E9FE /* ValleyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AABDFF06F841E451AD31BD1DC901430 /* ValleyDownloader.swift */; };
+		941745A684A4CD6D2B97B45C8495298D /* UIImageView+Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F0740733C86DDECE2F8D226777295 /* UIImageView+Valley.swift */; };
+		AF19B19ECB7B3AF300DA13FFCD9A2FC1 /* Valley-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3253AF1D64EC7FF49F22784CA8AB3B92 /* Valley-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71F6E0FC74956325D25C3833F8DA787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		D5A3479EC0CC328ABE0841239EC80C3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		D95D5D84773FEEC5FD6068495B790643 /* Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A30E828D935812E8632E91C1DE873 /* Valley.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C2128F641F3632D71D1DAB4FB8CCB67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6861154C946C53E3B18E10DBA80E33E1;
+			remoteInfo = Valley;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08A8746F81872101254E88CB28EE23EF /* Pods-ValleyDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValleyDemo-dummy.m"; sourceTree = "<group>"; };
+		0A2A30E828D935812E8632E91C1DE873 /* Valley.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Valley.swift; path = Valley/Source/Valley.swift; sourceTree = "<group>"; };
+		14A7EC36918D2B332BF7FCCC6A1E4EBE /* Valley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Valley.xcconfig; sourceTree = "<group>"; };
+		2C758767BD3F40488863AA50141EA89F /* Pods-ValleyDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValleyDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3253AF1D64EC7FF49F22784CA8AB3B92 /* Valley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Valley-umbrella.h"; sourceTree = "<group>"; };
+		3321CF8D9869E199116234E142203F35 /* ValleyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValleyJSON.swift; path = Valley/Source/ValleyJSON.swift; sourceTree = "<group>"; };
+		456F741CF8AC8FDC55B2D2D5E5C045AB /* Valley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Valley-prefix.pch"; sourceTree = "<group>"; };
+		4AABDFF06F841E451AD31BD1DC901430 /* ValleyDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValleyDownloader.swift; path = Valley/Source/ValleyDownloader.swift; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		60FCA25D551CD7EED1AED0CB84C8D60F /* Pods-ValleyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		674528820D00BBD482474108B33DEC8C /* Valley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Valley-dummy.m"; sourceTree = "<group>"; };
+		7DCB6361E62375E2A3DD3D7F31537DD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AA59A42CAC691DE12B6690E6C26C733 /* Pods-ValleyDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyDemo-frameworks.sh"; sourceTree = "<group>"; };
+		9086522A94D3E90274EFCADD576F987B /* Pods-ValleyDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ValleyDemo.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A22F0740733C86DDECE2F8D226777295 /* UIImageView+Valley.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Valley.swift"; path = "Valley/Source/UIImageView+Valley.swift"; sourceTree = "<group>"; };
+		B0DCAEEAD1D953BC0BA0E28B63FC1CF7 /* Pods-ValleyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValleyDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C61643E7255C9B3A59255AB1B56BA31A /* Valley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Valley.framework; path = Valley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB754258E00B18692FA482F0AE9505F9 /* Pods-ValleyDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValleyDemo-umbrella.h"; sourceTree = "<group>"; };
+		CB96EDB2387C02B524A1779EF3987275 /* Pods-ValleyDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValleyDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D01E17E9E70BE2BA67CC89C7DD10818E /* Pods-ValleyDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValleyDemo-resources.sh"; sourceTree = "<group>"; };
+		D027A94895FA5F58A5618FC1C17486BF /* Valley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Valley.modulemap; sourceTree = "<group>"; };
+		D3001534B1A9686C96F3CC74E9F6A597 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D62E67500958980535F8C0D8B22FC290 /* ValleyCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValleyCache.swift; path = Valley/Source/ValleyCache.swift; sourceTree = "<group>"; };
+		D684B2AACB4F7F46922C931A77929F01 /* Pods_ValleyDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ValleyDemo.framework; path = "Pods-ValleyDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8251961C9792009CBA44EBD0EB0270E /* Valley.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Valley.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E05252BC315483BAF8186AAC0CB3301D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6D1F340ED7C6F6E8FCC0C5766E43A46 /* Data+Valley.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Valley.swift"; path = "Valley/Source/Data+Valley.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26A7271FCBE12660D9D8D7403BF2C414 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71F6E0FC74956325D25C3833F8DA787 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B137420799F1976DC52D847A4CEA9485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A3479EC0CC328ABE0841239EC80C3D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A9635D049FF6CD239AA75B60AEE42E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DCB6361E62375E2A3DD3D7F31537DD8 /* Info.plist */,
+				D027A94895FA5F58A5618FC1C17486BF /* Valley.modulemap */,
+				14A7EC36918D2B332BF7FCCC6A1E4EBE /* Valley.xcconfig */,
+				674528820D00BBD482474108B33DEC8C /* Valley-dummy.m */,
+				456F741CF8AC8FDC55B2D2D5E5C045AB /* Valley-prefix.pch */,
+				3253AF1D64EC7FF49F22784CA8AB3B92 /* Valley-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "ValleyDemo/Pods/Target Support Files/Valley";
+			sourceTree = "<group>";
+		};
+		39BFC767B65F79D6550C722D7CCEF52C /* Valley */ = {
+			isa = PBXGroup;
+			children = (
+				E6D1F340ED7C6F6E8FCC0C5766E43A46 /* Data+Valley.swift */,
+				A22F0740733C86DDECE2F8D226777295 /* UIImageView+Valley.swift */,
+				0A2A30E828D935812E8632E91C1DE873 /* Valley.swift */,
+				D62E67500958980535F8C0D8B22FC290 /* ValleyCache.swift */,
+				4AABDFF06F841E451AD31BD1DC901430 /* ValleyDownloader.swift */,
+				3321CF8D9869E199116234E142203F35 /* ValleyJSON.swift */,
+				D1280130F7B1205608EDFBF025777CB1 /* Pod */,
+				1A9635D049FF6CD239AA75B60AEE42E8 /* Support Files */,
+			);
+			name = Valley;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A7829BB6D43DF5DD9267A9E8971E7907 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F0D24D5005902774FFDF76CDC4554263 /* Products */,
+				99978F473EEE537388EE843E693C3E1C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		943ED3226F584CEB8BFC37D5E8FC0C1E /* Pods-ValleyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E05252BC315483BAF8186AAC0CB3301D /* Info.plist */,
+				9086522A94D3E90274EFCADD576F987B /* Pods-ValleyDemo.modulemap */,
+				2C758767BD3F40488863AA50141EA89F /* Pods-ValleyDemo-acknowledgements.markdown */,
+				CB96EDB2387C02B524A1779EF3987275 /* Pods-ValleyDemo-acknowledgements.plist */,
+				08A8746F81872101254E88CB28EE23EF /* Pods-ValleyDemo-dummy.m */,
+				8AA59A42CAC691DE12B6690E6C26C733 /* Pods-ValleyDemo-frameworks.sh */,
+				D01E17E9E70BE2BA67CC89C7DD10818E /* Pods-ValleyDemo-resources.sh */,
+				CB754258E00B18692FA482F0AE9505F9 /* Pods-ValleyDemo-umbrella.h */,
+				60FCA25D551CD7EED1AED0CB84C8D60F /* Pods-ValleyDemo.debug.xcconfig */,
+				B0DCAEEAD1D953BC0BA0E28B63FC1CF7 /* Pods-ValleyDemo.release.xcconfig */,
+			);
+			name = "Pods-ValleyDemo";
+			path = "Target Support Files/Pods-ValleyDemo";
+			sourceTree = "<group>";
+		};
+		99978F473EEE537388EE843E693C3E1C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				943ED3226F584CEB8BFC37D5E8FC0C1E /* Pods-ValleyDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A7829BB6D43DF5DD9267A9E8971E7907 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39BFC767B65F79D6550C722D7CCEF52C /* Valley */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1280130F7B1205608EDFBF025777CB1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D3001534B1A9686C96F3CC74E9F6A597 /* LICENSE */,
+				D8251961C9792009CBA44EBD0EB0270E /* Valley.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F0D24D5005902774FFDF76CDC4554263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D684B2AACB4F7F46922C931A77929F01 /* Pods_ValleyDemo.framework */,
+				C61643E7255C9B3A59255AB1B56BA31A /* Valley.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		056D4B6E001DED668DBD76EF5B5BC992 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B411937871244446951F71F236D7B23 /* Pods-ValleyDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6834BF4A4EA9379C13E75CBAEE76EBE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19B19ECB7B3AF300DA13FFCD9A2FC1 /* Valley-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		50898648142D4660148262A6962933FC /* Pods-ValleyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C90D06CF321A8B518EB82F4EC30632 /* Build configuration list for PBXNativeTarget "Pods-ValleyDemo" */;
+			buildPhases = (
+				056D4B6E001DED668DBD76EF5B5BC992 /* Headers */,
+				D7AF1117E730C726097F8E7D1BF8AA1E /* Sources */,
+				26A7271FCBE12660D9D8D7403BF2C414 /* Frameworks */,
+				C9BF3A09A1FEAD8B337A06271C0BA030 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BD7F8E1F0925E0F68C3FD583F357022 /* PBXTargetDependency */,
+			);
+			name = "Pods-ValleyDemo";
+			productName = "Pods-ValleyDemo";
+			productReference = D684B2AACB4F7F46922C931A77929F01 /* Pods_ValleyDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6861154C946C53E3B18E10DBA80E33E1 /* Valley */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB13B7199228ED5760783A55130BD91 /* Build configuration list for PBXNativeTarget "Valley" */;
+			buildPhases = (
+				E6834BF4A4EA9379C13E75CBAEE76EBE /* Headers */,
+				F9FD274725A5A66CD10AD36707734726 /* Sources */,
+				B137420799F1976DC52D847A4CEA9485 /* Frameworks */,
+				D146873717A0BFEFF57DF103FDB30720 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Valley;
+			productName = Valley;
+			productReference = C61643E7255C9B3A59255AB1B56BA31A /* Valley.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F0D24D5005902774FFDF76CDC4554263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50898648142D4660148262A6962933FC /* Pods-ValleyDemo */,
+				6861154C946C53E3B18E10DBA80E33E1 /* Valley */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9BF3A09A1FEAD8B337A06271C0BA030 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D146873717A0BFEFF57DF103FDB30720 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7AF1117E730C726097F8E7D1BF8AA1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F40185E6846979CBE20A125EBA4B10 /* Pods-ValleyDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9FD274725A5A66CD10AD36707734726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				030DDB801957C98FA1C067AC75BF57C1 /* Data+Valley.swift in Sources */,
+				941745A684A4CD6D2B97B45C8495298D /* UIImageView+Valley.swift in Sources */,
+				7DAC6B6F9C17BA123A7D502DE08ECA7D /* Valley-dummy.m in Sources */,
+				D95D5D84773FEEC5FD6068495B790643 /* Valley.swift in Sources */,
+				7379F44541CF9192ADE49A2A1F9C0A7A /* ValleyCache.swift in Sources */,
+				8FCA74C4751CBD760E33A8A4F9A8E9FE /* ValleyDownloader.swift in Sources */,
+				59812983C8CD7EA41C450BE246AAE9FA /* ValleyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BD7F8E1F0925E0F68C3FD583F357022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Valley;
+			target = 6861154C946C53E3B18E10DBA80E33E1 /* Valley */;
+			targetProxy = 8C2128F641F3632D71D1DAB4FB8CCB67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3235FDC80917A259A4B207B004A2F66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A7EC36918D2B332BF7FCCC6A1E4EBE /* Valley.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Valley/Valley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Valley/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Valley/Valley.modulemap";
+				PRODUCT_MODULE_NAME = Valley;
+				PRODUCT_NAME = Valley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		48A9333BCD7A0BAC3D7437D3196C0805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0DCAEEAD1D953BC0BA0E28B63FC1CF7 /* Pods-ValleyDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ValleyDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ValleyDemo/Pods-ValleyDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CFBD032E39C54F92D247CD1865E36F39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A7EC36918D2B332BF7FCCC6A1E4EBE /* Valley.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Valley/Valley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Valley/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Valley/Valley.modulemap";
+				PRODUCT_MODULE_NAME = Valley;
+				PRODUCT_NAME = Valley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0BFCD6402811E1D8B172CD3338F0A5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FCA25D551CD7EED1AED0CB84C8D60F /* Pods-ValleyDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ValleyDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ValleyDemo/Pods-ValleyDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85ED3013A635C27F8B7FAF51362B108C /* Debug */,
+				40B45BB3CF3EE4476259302A7FAAD78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DB13B7199228ED5760783A55130BD91 /* Build configuration list for PBXNativeTarget "Valley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFBD032E39C54F92D247CD1865E36F39 /* Debug */,
+				3235FDC80917A259A4B207B004A2F66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C90D06CF321A8B518EB82F4EC30632 /* Build configuration list for PBXNativeTarget "Pods-ValleyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BFCD6402811E1D8B172CD3338F0A5A /* Debug */,
+				48A9333BCD7A0BAC3D7437D3196C0805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
