@@ -23,19 +23,22 @@ pod 'Valley'
 
 1. Add `import Valley` to your code
 
-1. From your UIImageView instance, you can just.
-`imageView.valleyImage(url: "https://yourwebseite.com/img.jpeg")`
-
+2. From your UIImageView instance, you can just:
+```Swift
+imageView.valleyImage(url: "https://yourwebseite.com/img.jpeg")
+```
+3. To download other kind of files for example(there'll be some changes soon, merging both approaches):
+```Swift
+ValleyJSON<[[String: Any]]>.request(url: "https://yourwebsite.com/data.json") { (json) in }
+Data.request(url: "https://yourwebsite.com/data.json") { (data) in }
+```
 ## Canceling download
 
-Ongoing files download for the image view is automatically canceled when:
-
-Call 
+To manually cancel the download, call:
 ```Swift
 let task = imageView.valleyImage(url: "https://yourwebseite.com/img.jpeg")
 task.cancel()
 ```
-to manually cancel the download.
 
 
 ## Supply a placeholder image
