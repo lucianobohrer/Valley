@@ -15,8 +15,7 @@ class ValleyDownloaderTests: XCTestCase {
     private let bundle = Bundle.init(for: ValleyDownloaderTests.self)
     
     override func setUp() {
-        Valley.setup(capacityInBytes: 2 * 1024 * 1024,
-                     testing: true)
+        Valley.setup(capacityInBytes: 2 * 1024 * 1024)
     }
 
     func testImageDownload() {
@@ -31,7 +30,31 @@ class ValleyDownloaderTests: XCTestCase {
             XCTAssertNotNil(self.imageView.image)
             expectation.fulfill()
         })
+        // Since the request is async, I make this expectation
+        wait(for: [expectation], timeout: 3)
+    }
+    
+    func testJSONDownload() {
+        let expectation = XCTestExpectation(description: "Wait for json")
+        let url = bundle.url(forResource: "json-sample",
+                             withExtension: "json")?.absoluteString ?? ""
         
+        ValleyJSON<[[String: Any]]>.request(url: url, completion: { (items) -> (Void) in
+            XCTAssertTrue(items.count > 0)
+            expectation.fulfill()
+        })
+        // Since the request is async, I make this expectation
+        wait(for: [expectation], timeout: 3)
+    }
+    
+    func testDataDownload() {
+        let expectation = XCTestExpectation(description: "Wait for Data")
+        let url = bundle.url(forResource: "image-sample",
+                             withExtension: "jpeg")?.absoluteString ?? ""
+        Data.valleyData(url: url, completion: { (data) -> (Void) in
+            XCTAssertNotNil(data)
+            expectation.fulfill()
+        })
         // Since the request is async, I make this expectation
         wait(for: [expectation], timeout: 3)
     }

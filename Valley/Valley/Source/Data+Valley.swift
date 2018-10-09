@@ -10,7 +10,7 @@ public extension Data {
     
     // MARK: Internal methods
     /**
-     This method downloads any kind of file from the `urlString` and pass through completion closure
+     This method downloads Data file from the `urlString` and pass through completion closure
      - parameter urlString: String of images url
      - parameter completion: Closure containing Data from the request
      - parameter onError: Closure triggered when an error has occurred
@@ -18,8 +18,8 @@ public extension Data {
     @discardableResult
     public static func valleyData(url urlString: String,
                                   completion: @escaping (Data) -> (Void),
-                                  onError: @escaping (ValleyError?) -> (Void)) -> URLSessionTask? {
-        if let value = Valley.cache.getValue(for: urlString) as? Data {
+                                  onError: ((ValleyError?) -> (Void))? = nil) -> URLSessionTask? {
+        if let value = Valley.cache.value(for: urlString) as? Data {
             completion(value)
             return nil
         }
@@ -28,7 +28,7 @@ public extension Data {
             .request(urlString: urlString,
                      onError: onError) { (data) -> (Void) in
                         DispatchQueue.main.async {
-                            Valley.cache.setValue(data, for: urlString, cost: data.count)
+                            Valley.cache.add(data, for: urlString, cost: data.count)
                             completion(data)
                      }
         }

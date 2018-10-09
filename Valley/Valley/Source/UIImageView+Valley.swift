@@ -23,6 +23,7 @@ public extension UIImageView {
      - parameter urlString: String of images url
      - parameter placeholder: Placeholder to be used during download
      - parameter option: `AnimationOptions` to be used when image is set to the view
+     - parameter onSuccess: Closure triggered when the request was successful
      - parameter onError: Closure triggered when an error has occurred
     */
     @discardableResult
@@ -33,7 +34,7 @@ public extension UIImageView {
                             onError: ((ValleyError?) -> Void)? = nil) -> URLSessionTask? {
         self.image = placeholder
         
-        if let value = Valley.cache.getValue(for: urlString.appending("\(self.bounds.size.width)")) as? Data, let img = UIImage(data: value) {
+        if let value = Valley.cache.value(for: urlString.appending("\(self.bounds.size.width)")) as? Data, let img = UIImage(data: value) {
             UIView.transition(with: self,
                               duration: 0.3,
                               options: .transitionCrossDissolve,
@@ -55,7 +56,7 @@ public extension UIImageView {
                         DispatchQueue.main.async {
                             let resizedImage = image.resize(withWidth: self.bounds.size.width)
                             if let dataResized = resizedImage.jpegData(compressionQuality: 1.0) {
-                                Valley.cache.setValue(dataResized,
+                                Valley.cache.add(dataResized,
                                                       for: urlString.appending("\(self.bounds.size.width)"),
                                                       cost: dataResized.count)
                                 UIView.transition(with: self,

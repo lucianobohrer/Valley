@@ -18,8 +18,8 @@ public class ValleyJSON<T> {
     @discardableResult
     public static func request(url urlString: String,
                                   completion: @escaping (T) -> (Void),
-                                  onError: @escaping (ValleyError?) -> (Void)) -> URLSessionTask? {
-        if let value = Valley.cache.getValue(for: urlString) as? T {
+                                  onError: ((ValleyError?) -> (Void))? = nil) -> URLSessionTask? {
+        if let value = Valley.cache.value(for: urlString) as? T {
             completion(value)
             return nil
         }
@@ -28,7 +28,7 @@ public class ValleyJSON<T> {
             .request(urlString: urlString,
                      onError: onError) { (json) -> (Void) in
                         DispatchQueue.main.async {
-                            Valley.cache.setValue(json, for: urlString, cost: malloc_size(json as? UnsafeRawPointer))
+                            Valley.cache.add(json, for: urlString, cost: malloc_size(json as? UnsafeRawPointer))
                             completion(json)
                         }
         }
