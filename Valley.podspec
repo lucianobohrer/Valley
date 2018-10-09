@@ -27,8 +27,6 @@ Pod::Spec.new do |s|
   s.ios.framework  = 'Foundation'
 
   # 8
-  s.source_files = ["#{s.name}/**/*.{swift}"]
+  s.source_files  = 'Valley/Source/**/*'
 
-  # 9
-  s.resources = ["#{s.name}/**/*.{png}", "#{s.name}/**/*.{jpeg}", "#{s.name}/**/*.{jpg}", "#{s.name}/**/*.{storyboard}", "#{s.name}/**/*.{ttf}", "#{s.name}/**/*.{xib}", "#{s.name}/**/*.{json}", "#{s.name}/**/*.{xcassets}", "#{s.name}/**/*.{strings}"]
 end
