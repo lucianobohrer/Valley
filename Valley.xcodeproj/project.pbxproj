@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD2409BB2169376900BEF7CB /* Valley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2409B12169376900BEF7CB /* Valley.framework */; };
-		AD2409C02169376900BEF7CB /* ValleyCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409BF2169376900BEF7CB /* ValleyCacheTests.swift */; };
 		AD2409C22169376900BEF7CB /* Valley.h in Headers */ = {isa = PBXBuildFile; fileRef = AD2409B42169376900BEF7CB /* Valley.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409E921694B2700BEF7CB /* ValleyCache.swift */; };
 		AD2409EF2169526000BEF7CB /* ValleyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */; };
 		AD2409F1216952C900BEF7CB /* UIImageView+Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */; };
 		AD2409F3216953A500BEF7CB /* Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409F2216953A500BEF7CB /* Valley.swift */; };
-		AD328F33216C510200D40A60 /* json-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = AD328F32216C510200D40A60 /* json-sample.json */; };
-		AD328F34216C510200D40A60 /* json-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = AD328F32216C510200D40A60 /* json-sample.json */; };
-		ADAC43E1216C00EA00466CDB /* ValleyDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAC43E0216C00EA00466CDB /* ValleyDownloaderTests.swift */; };
-		ADAC43E9216C07CB00466CDB /* image-sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ADAC43E7216C078F00466CDB /* image-sample.jpeg */; };
-		ADAC43EA216C09AF00466CDB /* image-sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ADAC43E7216C078F00466CDB /* image-sample.jpeg */; };
+		AD42476E216E766E00BDDB98 /* Valley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2409B12169376900BEF7CB /* Valley.framework */; };
+		AD424777216E77B400BDDB98 /* image-sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD424775216E77B400BDDB98 /* image-sample.jpeg */; };
+		AD424778216E77B400BDDB98 /* image-sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD424775216E77B400BDDB98 /* image-sample.jpeg */; };
+		AD424779216E77B400BDDB98 /* json-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = AD424776216E77B400BDDB98 /* json-sample.json */; };
+		AD42477A216E77B400BDDB98 /* json-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = AD424776216E77B400BDDB98 /* json-sample.json */; };
+		AD42477D216E77D500BDDB98 /* ValleyCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD42477B216E77D500BDDB98 /* ValleyCacheTests.swift */; };
+		AD42477E216E77D500BDDB98 /* ValleyDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD42477C216E77D500BDDB98 /* ValleyDownloaderTests.swift */; };
 		ADE7FD37216B1995003E1368 /* ValleyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7FD36216B1995003E1368 /* ValleyFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AD2409BC2169376900BEF7CB /* PBXContainerItemProxy */ = {
+		AD42476F216E766E00BDDB98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD2409A82169376900BEF7CB /* Project object */;
 			proxyType = 1;
@@ -36,16 +36,16 @@
 		AD2409B12169376900BEF7CB /* Valley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2409B42169376900BEF7CB /* Valley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valley.h; sourceTree = "<group>"; };
 		AD2409B52169376900BEF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD2409BA2169376900BEF7CB /* ValleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD2409BF2169376900BEF7CB /* ValleyCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyCacheTests.swift; sourceTree = "<group>"; };
-		AD2409C12169376900BEF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD2409E921694B2700BEF7CB /* ValleyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyCache.swift; sourceTree = "<group>"; };
 		AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyDownloader.swift; sourceTree = "<group>"; };
 		AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Valley.swift"; sourceTree = "<group>"; };
 		AD2409F2216953A500BEF7CB /* Valley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Valley.swift; sourceTree = "<group>"; };
-		AD328F32216C510200D40A60 /* json-sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "json-sample.json"; sourceTree = "<group>"; };
-		ADAC43E0216C00EA00466CDB /* ValleyDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyDownloaderTests.swift; sourceTree = "<group>"; };
-		ADAC43E7216C078F00466CDB /* image-sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-sample.jpeg"; sourceTree = "<group>"; };
+		AD424769216E766E00BDDB98 /* ValleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD42476D216E766E00BDDB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD424775216E77B400BDDB98 /* image-sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-sample.jpeg"; sourceTree = "<group>"; };
+		AD424776216E77B400BDDB98 /* json-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "json-sample.json"; sourceTree = "<group>"; };
+		AD42477B216E77D500BDDB98 /* ValleyCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyCacheTests.swift; sourceTree = "<group>"; };
+		AD42477C216E77D500BDDB98 /* ValleyDownloaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyDownloaderTests.swift; sourceTree = "<group>"; };
 		ADE7FD36216B1995003E1368 /* ValleyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,11 +57,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD2409B72169376900BEF7CB /* Frameworks */ = {
+		AD424766216E766E00BDDB98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2409BB2169376900BEF7CB /* Valley.framework in Frameworks */,
+				AD42476E216E766E00BDDB98 /* Valley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2409B32169376900BEF7CB /* Valley */,
-				AD2409BE2169376900BEF7CB /* ValleyTests */,
+				AD42476A216E766E00BDDB98 /* ValleyTests */,
 				AD2409B22169376900BEF7CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2409B12169376900BEF7CB /* Valley.framework */,
-				AD2409BA2169376900BEF7CB /* ValleyTests.xctest */,
+				AD424769216E766E00BDDB98 /* ValleyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,17 +93,6 @@
 				AD2409E821694AEB00BEF7CB /* Source */,
 			);
 			path = Valley;
-			sourceTree = "<group>";
-		};
-		AD2409BE2169376900BEF7CB /* ValleyTests */ = {
-			isa = PBXGroup;
-			children = (
-				ADAC43E4216C066100466CDB /* Samples */,
-				AD2409BF2169376900BEF7CB /* ValleyCacheTests.swift */,
-				ADAC43E0216C00EA00466CDB /* ValleyDownloaderTests.swift */,
-				AD2409C12169376900BEF7CB /* Info.plist */,
-			);
-			path = ValleyTests;
 			sourceTree = "<group>";
 		};
 		AD2409CB216937B500BEF7CB /* Application */ = {
@@ -127,11 +116,22 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		ADAC43E4216C066100466CDB /* Samples */ = {
+		AD42476A216E766E00BDDB98 /* ValleyTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADAC43E7216C078F00466CDB /* image-sample.jpeg */,
-				AD328F32216C510200D40A60 /* json-sample.json */,
+				AD424774216E77AA00BDDB98 /* Samples */,
+				AD42477B216E77D500BDDB98 /* ValleyCacheTests.swift */,
+				AD42477C216E77D500BDDB98 /* ValleyDownloaderTests.swift */,
+				AD42476D216E766E00BDDB98 /* Info.plist */,
+			);
+			path = ValleyTests;
+			sourceTree = "<group>";
+		};
+		AD424774216E77AA00BDDB98 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				AD424775216E77B400BDDB98 /* image-sample.jpeg */,
+				AD424776216E77B400BDDB98 /* json-sample.json */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -168,22 +168,22 @@
 			productReference = AD2409B12169376900BEF7CB /* Valley.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AD2409B92169376900BEF7CB /* ValleyTests */ = {
+		AD424768216E766E00BDDB98 /* ValleyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD2409C82169376900BEF7CB /* Build configuration list for PBXNativeTarget "ValleyTests" */;
+			buildConfigurationList = AD424771216E766E00BDDB98 /* Build configuration list for PBXNativeTarget "ValleyTests" */;
 			buildPhases = (
-				AD2409B62169376900BEF7CB /* Sources */,
-				AD2409B72169376900BEF7CB /* Frameworks */,
-				AD2409B82169376900BEF7CB /* Resources */,
+				AD424765216E766E00BDDB98 /* Sources */,
+				AD424766216E766E00BDDB98 /* Frameworks */,
+				AD424767216E766E00BDDB98 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AD2409BD2169376900BEF7CB /* PBXTargetDependency */,
+				AD424770216E766E00BDDB98 /* PBXTargetDependency */,
 			);
 			name = ValleyTests;
 			productName = ValleyTests;
-			productReference = AD2409BA2169376900BEF7CB /* ValleyTests.xctest */;
+			productReference = AD424769216E766E00BDDB98 /* ValleyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -200,8 +200,9 @@
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
 					};
-					AD2409B92169376900BEF7CB = {
+					AD424768216E766E00BDDB98 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -219,7 +220,7 @@
 			projectRoot = "";
 			targets = (
 				AD2409B02169376900BEF7CB /* Valley */,
-				AD2409B92169376900BEF7CB /* ValleyTests */,
+				AD424768216E766E00BDDB98 /* ValleyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,17 +230,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADAC43EA216C09AF00466CDB /* image-sample.jpeg in Resources */,
-				AD328F33216C510200D40A60 /* json-sample.json in Resources */,
+				AD424777216E77B400BDDB98 /* image-sample.jpeg in Resources */,
+				AD424779216E77B400BDDB98 /* json-sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD2409B82169376900BEF7CB /* Resources */ = {
+		AD424767216E766E00BDDB98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADAC43E9216C07CB00466CDB /* image-sample.jpeg in Resources */,
-				AD328F34216C510200D40A60 /* json-sample.json in Resources */,
+				AD424778216E77B400BDDB98 /* image-sample.jpeg in Resources */,
+				AD42477A216E77B400BDDB98 /* json-sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,22 +259,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD2409B62169376900BEF7CB /* Sources */ = {
+		AD424765216E766E00BDDB98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2409C02169376900BEF7CB /* ValleyCacheTests.swift in Sources */,
-				ADAC43E1216C00EA00466CDB /* ValleyDownloaderTests.swift in Sources */,
+				AD42477D216E77D500BDDB98 /* ValleyCacheTests.swift in Sources */,
+				AD42477E216E77D500BDDB98 /* ValleyDownloaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AD2409BD2169376900BEF7CB /* PBXTargetDependency */ = {
+		AD424770216E766E00BDDB98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AD2409B02169376900BEF7CB /* Valley */;
-			targetProxy = AD2409BC2169376900BEF7CB /* PBXContainerItemProxy */;
+			targetProxy = AD42476F216E766E00BDDB98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -330,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -388,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -419,6 +420,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.Valley;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -447,6 +449,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.Valley;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -455,37 +458,42 @@
 			};
 			name = Release;
 		};
-		AD2409C92169376900BEF7CB /* Debug */ = {
+		AD424772216E766E00BDDB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
 				INFOPLIST_FILE = ValleyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.ValleyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AD2409CA2169376900BEF7CB /* Release */ = {
+		AD424773216E766E00BDDB98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
 				INFOPLIST_FILE = ValleyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.ValleyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -514,11 +522,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD2409C82169376900BEF7CB /* Build configuration list for PBXNativeTarget "ValleyTests" */ = {
+		AD424771216E766E00BDDB98 /* Build configuration list for PBXNativeTarget "ValleyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD2409C92169376900BEF7CB /* Debug */,
-				AD2409CA2169376900BEF7CB /* Release */,
+				AD424772216E766E00BDDB98 /* Debug */,
+				AD424773216E766E00BDDB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

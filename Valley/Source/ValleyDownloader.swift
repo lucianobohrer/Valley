@@ -23,7 +23,7 @@ internal final class ValleyDownloader<T> {
      */
     
     @discardableResult
-    static func request(urlString: String,
+    internal static func request(urlString: String,
                                onError: ((ValleyError?) -> Void)? = nil,
                                completion: ((T, Int) -> Void)? = nil) -> URLSessionTask? {
         

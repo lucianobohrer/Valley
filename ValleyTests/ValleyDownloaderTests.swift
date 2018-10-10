@@ -25,11 +25,12 @@ class ValleyDownloaderTests: XCTestCase {
         
         // Check if there's not image set
         XCTAssertNil(self.imageView.image)
-        
-        imageView.valleyImage(url: url, onSuccess: { (_) in
+        imageView.valleyImage(url: url, onSuccess: { (image) in
             XCTAssertNotNil(self.imageView.image)
+            XCTAssertNotNil(image)
             expectation.fulfill()
         })
+        
         // Since the request is async, I make this expectation
         wait(for: [expectation], timeout: 3)
     }
