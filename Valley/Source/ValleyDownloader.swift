@@ -14,7 +14,7 @@ import Foundation
  */
 
 // MARK: - Class
-final class ValleyDownloader<T> {
+internal final class ValleyDownloader<T> {
     
     // MARK: Static methods
     
@@ -25,7 +25,7 @@ final class ValleyDownloader<T> {
     @discardableResult
     static func request(urlString: String,
                                onError: ((ValleyError?) -> Void)? = nil,
-                               completion: ((T) -> Void)? = nil) -> URLSessionTask? {
+                               completion: ((T, Int) -> Void)? = nil) -> URLSessionTask? {
         
         guard let url = URL(string: urlString) else {
             onError?(.invalidUrl)
@@ -39,7 +39,7 @@ final class ValleyDownloader<T> {
             }
             
             if let parsedData = self.parseData(data: data) {
-                completion?(parsedData)
+                completion?(parsedData, data.count)
                 return
             } else {
                 onError?(.invalidParse)

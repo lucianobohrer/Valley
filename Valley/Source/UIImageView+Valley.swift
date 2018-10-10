@@ -47,7 +47,7 @@ public extension UIImageView {
         
         let task = ValleyDownloader<UIImage>
             .request(urlString: urlString,
-                     onError: onError) { [weak self] (image) -> (Void) in
+                     onError: onError) { [weak self] (image, size) -> (Void) in
                         guard let `self` = self else {
                             onError?(.generic)
                             return
@@ -55,7 +55,7 @@ public extension UIImageView {
                         if let data = image.pngData(){
                             Valley.cache.add(data,
                                              for: urlString,
-                                             cost: data.count)
+                                             cost: size)
                             DispatchQueue.main.async {
                                 UIView.transition(with: self,
                                                   duration: 0.3,

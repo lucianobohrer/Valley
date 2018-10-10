@@ -26,9 +26,9 @@ public class ValleyFile<T> {
         
         let task = ValleyDownloader<T>
             .request(urlString: urlString,
-                     onError: onError) { (file) -> (Void) in
+                     onError: onError) { (file, size) -> (Void) in
                         DispatchQueue.main.async {
-                            Valley.cache.add(file, for: urlString, cost: MemoryLayout.size(ofValue: file))
+                            Valley.cache.add(file, for: urlString, cost: size)
                             completion(file)
                         }
         }
