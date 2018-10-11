@@ -8,13 +8,17 @@
 import Foundation
 
 // MARK: - Class
-final public class ValleyCache {
+final public class ValleyCache: NSObject {
     
     // MARK: Internal variables
     internal var capacity: Int
     
     // MARK: Private variables
+    private var queue: DispatchQueue = DispatchQueue(label: "cache-queue")
     private var items: [ValleyPayload] = []
+    internal var totalItems: Int {
+        get { return self.items.count }
+    }
     
     // MARK: Initializers
     init(capacity: Int) {
@@ -22,21 +26,22 @@ final public class ValleyCache {
     }
     
     // MARK: Internal methods
-    @discardableResult
-    func add(_ value: Any, for key: String, cost: Int) -> Bool {
-        guard cost <= self.capacity else { return false }
-        let payload = ValleyPayload(key: key, value: value, cost: cost)
-        
-        if let index = items.map({$0.key}).firstIndex(of: key) {
-            self.items.remove(at: index)
+    func add(_ value: Any, for key: String, cost: Int) {
+        self.queue.sync {
+            if cost <= self.capacity {
+                let payload = ValleyPayload(key: key, value: value, cost: cost)
+            
+                if let index = self.items.map({$0.key}).firstIndex(of: key) {
+                    self.items.remove(at: index)
+                }
+            
+                while self.availableStorage() < cost, self.items.count > 0 {
+                    self.items.removeFirst()
+                }
+            
+                self.items.append(payload)
+            }
         }
-        
-        while self.availableStorage() < cost, items.count > 0 {
-            self.items.removeFirst()
-        }
-        
-        self.items.append(payload)
-        return true
     }
     
     // MARK: Internal methods

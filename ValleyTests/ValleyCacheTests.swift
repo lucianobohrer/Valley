@@ -23,7 +23,8 @@ class ValleyCacheTests: XCTestCase {
         XCTAssertNotNil(Valley.cache.value(for: "id1"))
         XCTAssertNotNil(Valley.cache.value(for: "id2"))
         XCTAssertNil(Valley.cache.value(for: "id3"))
-        XCTAssertFalse(Valley.cache.add("OverCapacity", for: "id4", cost: 120))
+        Valley.cache.add("OverCapacity", for: "id4", cost: 120)
+        XCTAssertNil(Valley.cache.value(for: "id4"))
     }
     
     func testCacheEviction() {
@@ -43,7 +44,8 @@ class ValleyCacheTests: XCTestCase {
         XCTAssertNotNil(Valley.cache.value(for: "id1"))
         Valley.cache.add("teste", for: "id1", cost: 49)
         
-        XCTAssertTrue(Valley.cache.add("teste", for: "id2", cost: 51))
+        Valley.cache.add("teste", for: "id2", cost: 51)
+        XCTAssertNotNil(Valley.cache.value(for: "id2"))
         XCTAssertNotNil(Valley.cache.value(for: "id1"))
     }
     
