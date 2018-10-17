@@ -34,7 +34,14 @@ public extension UIImageView {
                             onError: ((ValleyError?) -> Void)? = nil) -> URLSessionTask? {
         self.image = placeholder
         
-        if let value = Valley.cache.value(for: urlString) as? Data, let img = UIImage(data: value) {
+        var rawData: Any?
+        
+        Valley.cache.value(for: urlString) { (item) in
+            rawData = item
+        }
+        
+        
+        if let value = rawData as? Data, let img = UIImage(data: value) {
             UIView.transition(with: self,
                               duration: 0.3,
                               options: .transitionCrossDissolve,

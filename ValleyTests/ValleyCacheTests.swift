@@ -20,11 +20,25 @@ class ValleyCacheTests: XCTestCase {
         Valley.cache.add("teste", for: "id1", cost: 10)
         Valley.cache.add("teste", for: "id2", cost: 30)
         
-        XCTAssertNotNil(Valley.cache.value(for: "id1"))
-        XCTAssertNotNil(Valley.cache.value(for: "id2"))
-        XCTAssertNil(Valley.cache.value(for: "id3"))
+        Valley.cache.value(for: "id1") { (data) in
+            XCTAssertNotNil(data)
+        }
+        
+        Valley.cache.value(for: "id2") { (data) in
+            XCTAssertNotNil(data)
+        }
+        
+        Valley.cache.value(for: "id3") { (data) in
+            XCTAssertNil(data)
+        }
+        
         Valley.cache.add("OverCapacity", for: "id4", cost: 120)
-        XCTAssertNil(Valley.cache.value(for: "id4"))
+        
+        Valley.cache.value(for: "id4") { (data) in
+            XCTAssertNil(data)
+        }
+        
+        XCTAssertEqual(Valley.cache.availableStorage(), 60)
     }
     
     func testCacheEviction() {
@@ -32,33 +46,74 @@ class ValleyCacheTests: XCTestCase {
         Valley.cache.add("teste", for: "id1", cost: 90)
         Valley.cache.add("teste", for: "id2", cost: 10)
         
-        XCTAssertNotNil(Valley.cache.value(for: "id1"))
+        Valley.cache.value(for: "id1") { (data) in
+            XCTAssertNotNil(data)
+        }
         
         Valley.cache.add("teste", for: "id3", cost: 20)
         
-        XCTAssertNil(Valley.cache.value(for: "id2"))
-    }
+        Valley.cache.value(for: "id2") { (data) in
+            XCTAssertNil(data)
+        }    }
     
     func testUpdateCache() {
         Valley.cache.add("teste", for: "id1", cost: 50)
-        XCTAssertNotNil(Valley.cache.value(for: "id1"))
+        
+        Valley.cache.value(for: "id1") { (data) in
+            XCTAssertNotNil(data)
+        }
+        
         Valley.cache.add("teste", for: "id1", cost: 49)
         
         Valley.cache.add("teste", for: "id2", cost: 51)
-        XCTAssertNotNil(Valley.cache.value(for: "id2"))
-        XCTAssertNotNil(Valley.cache.value(for: "id1"))
+        Valley.cache.value(for: "id2") { (data) in
+            XCTAssertNotNil(data)
+        }
+        Valley.cache.value(for: "id1") { (data) in
+            XCTAssertNotNil(data)
+        }
     }
     
     func testClearCache() {
         Valley.cache.add("teste", for: "id1", cost: 10)
         Valley.cache.add("teste", for: "id2", cost: 30)
         
-        XCTAssertNotNil(Valley.cache.value(for: "id1"))
-        XCTAssertNotNil(Valley.cache.value(for: "id2"))
+        Valley.cache.value(for: "id1") { (data) in
+            XCTAssertNotNil(data)
+        }
+        Valley.cache.value(for: "id2") { (data) in
+            XCTAssertNotNil(data)
+        }
         
         Valley.cache.clearCache()
         
-        XCTAssertNil(Valley.cache.value(for: "id1"))
-        XCTAssertNil(Valley.cache.value(for: "id2"))
+        Valley.cache.value(for: "id1") { (data) in
+            XCTAssertNil(data)
+        }
+        Valley.cache.value(for: "id2") { (data) in
+            XCTAssertNil(data)
+        }
+    }
+    
+    func testMassiveSearch() {
+        let cache = ValleyCache(capacity: 1000)
+        DispatchQueue.global().async {
+            for i in 0..<1000 {
+                cache.add("value\(i)", for: "item\(i)", cost: 1)
+            }
+        }
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.3) {
+            for i in 0..<1000 {
+                DispatchQueue.global().async {
+                    cache.value(for: "item\(i)", completion: { (item) in
+                        if item == nil {
+                            // Before using queue, trying to get the value usually crashed the app
+                            print("===== item\(i) is nil  ======")
+                        }
+                    })
+                }
+            }
+        }
     }
 }

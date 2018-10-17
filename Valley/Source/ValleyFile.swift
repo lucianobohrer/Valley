@@ -19,7 +19,13 @@ public class ValleyFile<T> {
     public static func request(url urlString: String,
                                   completion: @escaping (T) -> (Void),
                                   onError: ((ValleyError?) -> (Void))? = nil) -> URLSessionTask? {
-        if let value = Valley.cache.value(for: urlString) as? T {
+        var rawData: Any?
+        
+        Valley.cache.value(for: urlString) { (item) in
+            rawData = item
+        }
+        
+        if let value = rawData as? T {
             completion(value)
             return nil
         }

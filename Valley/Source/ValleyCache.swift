@@ -15,10 +15,7 @@ final public class ValleyCache: NSObject {
     
     // MARK: Private variables
     private var queue: DispatchQueue = DispatchQueue(label: "cache-queue")
-    private var items: [ValleyPayload] = []
-    internal var totalItems: Int {
-        get { return self.items.count }
-    }
+    internal private(set) var items: [ValleyPayload] = []
     
     // MARK: Initializers
     init(capacity: Int) {
@@ -45,13 +42,16 @@ final public class ValleyCache: NSObject {
     }
     
     // MARK: Internal methods
-    func value(for key: String) -> Any? {
-        if let index = items.map({$0.key}).firstIndex(of: key) {
-            let rearranged = items.remove(at: index)
-            self.items.append(rearranged)
-            return rearranged
+    func value(for key: String, completion: ((Any?) -> Void)) {
+        self.queue.sync {
+            if let index = items.map({$0.key}).firstIndex(of: key) {
+                let rearranged = items.remove(at: index)
+                self.items.append(rearranged)
+                completion(rearranged)
+            } else {
+                completion(nil)
+            }
         }
-        return nil
     }
     
     // MARK: Private methods
