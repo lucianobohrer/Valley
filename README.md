@@ -5,7 +5,7 @@
 * Images are downloaded asynchronously.
 * [LRU](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) concept to cache management
 * Allows to configure cache size.
-* Has extensions and wrappers for UIImageView, Data, Dictionaries and Arrays 
+* Has extension for UIImageView
 * Provides closure properties manipulation and error handling.
 
 ## Setup
