@@ -8,6 +8,11 @@
 * Has extension for UIImageView
 * Provides closure properties manipulation and error handling.
 
+# TODO List
+- [x] In Memory Cache
+- [ ] Disk Storage Cache
+- [ ] New extensions (e.g. WKWebView)
+
 ## Setup
 
 #### Setup with CocoaPods (iOS 8+)
