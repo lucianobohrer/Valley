@@ -12,7 +12,7 @@
 - [x] In Memory Cache
 - [ ] Disk Storage Cache
 - [ ] New extensions (e.g. WKWebView)
-
+- [ ] Travis integration
 ## Setup
 
 #### Setup with CocoaPods (iOS 8+)
