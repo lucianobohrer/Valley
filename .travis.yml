@@ -1,0 +1,21 @@
+language: objective-c
+os: osx
+osx_image:
+  - xcode10
+
+env:
+  global:
+  - SCHEME="Valley"
+
+  matrix:
+    - DESTINATION="platform=iOS Simulator,name=iPhone SE,OS=10.0"
+    - DESTINATION="platform=iOS Simulator,name=iPhone 5s,OS=11.0.1"
+    - DESTINATION="platform=iOS Simulator,name=iPhone X,OS=12.0"
+
+
+script:
+  - xcodebuild test -scheme "$SCHEME" -destination "$DESTINATION" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
+
+
+notifications:
+  email: false
