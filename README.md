@@ -19,7 +19,7 @@
 - [ ] Travis integration
 ## Setup
 
-#### Setup with CocoaPods (iOS 8+)
+#### Setup with CocoaPods (iOS 10+)
 
 If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
