@@ -23,7 +23,7 @@ final public class ValleyCache: NSObject {
     }
     
     // MARK: Internal methods
-    func add(_ value: Any, for key: String, cost: Int) {
+    func adds(_ value: Any, for key: String, cost: Int) {
         self.queue.sync {
             if cost <= self.capacity {
                 let payload = ValleyPayload(key: key, value: value, cost: cost)
