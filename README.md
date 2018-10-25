@@ -1,6 +1,10 @@
 # Valley, a file downloader written in Swift for iOS
 
-[![CocoaPods]](https://cocoapods.org/pods/Valley)
+<p align="center">
+<img src="https://img.shields.io/cocoapods/v/Valley.svg?label=version">
+<img src="https://img.shields.io/badge/platforms-iOS-lightgrey.svg">
+<a href="https://travis-ci.org/lucianobohrer/Valley"><img src="https://img.shields.io/travis/lucianobohrer/Valley.svg?branch=master"></a>
+</p>
 
 * Images are downloaded asynchronously.
 * [LRU](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) concept to cache management
