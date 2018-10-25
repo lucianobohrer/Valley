@@ -1,4 +1,4 @@
-# Valley, a file downloader written in Swift for iOS
+# Valley, a file downloader written in Swift 4 for iOS
 
 <p align="center">
 <img src="https://img.shields.io/cocoapods/v/Valley.svg?label=version">
