@@ -15,6 +15,7 @@
 # TODO List
 - [x] In Memory Cache
 - [ ] Disk Storage Cache
+- [ ] Improve cache item size
 - [ ] New extensions (e.g. WKWebView)
 - [x] Travis integration
 ## Setup
