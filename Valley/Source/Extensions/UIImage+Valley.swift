@@ -20,14 +20,14 @@ extension UIImage {
         let targetHeight = self.size.height / ratio
         
         guard let cgi = self.cgImage, let colorSpace = cgi.colorSpace else { return nil }
-
+        
         let bitmap = CGContext(data: nil,
                                width: Int(targetWidth),
                                height: Int(targetHeight),
                                bitsPerComponent: cgi.bitsPerComponent,
-                               bytesPerRow: cgi.bytesPerRow,
+                               bytesPerRow: 4 * Int(targetWidth),
                                space: colorSpace,
-                               bitmapInfo: cgi.bitmapInfo.rawValue)
+                               bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)
 
         bitmap?.draw(cgi, in: CGRect(x: 0, y: 0, width: targetWidth, height: targetHeight))
     
