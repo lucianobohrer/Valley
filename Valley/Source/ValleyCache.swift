@@ -47,7 +47,7 @@ final public class ValleyCache: NSObject {
             if let index = items.map({$0.key}).firstIndex(of: key) {
                 let rearranged = items.remove(at: index)
                 self.items.append(rearranged)
-                completion(rearranged)
+                completion(rearranged.value)
             } else {
                 completion(nil)
             }
