@@ -29,11 +29,11 @@ public extension UIImageView {
     @discardableResult
     public func valleyImage(url urlString: String,
                             placeholder: UIImage? = nil,
-                            option: AnimationOptions? = .transitionCrossDissolve,
+                            transition: AnimationOptions = .transitionCrossDissolve,
                             onSuccess: ((UIImage) -> Void)? = nil,
                             onError: ((ValleyError?) -> Void)? = nil) -> URLSessionTask? {
         self.image = placeholder
-        let widthTarget = self.frame.width
+        let widthTarget = max(CGFloat(256.0), self.frame.width)
         let identifier =  "\(urlString)\(widthTarget)"
         var rawData: Any?
         
@@ -44,9 +44,13 @@ public extension UIImageView {
         if let value = rawData as? Data, let img = UIImage(data: value) {
             UIView.transition(with: self,
                               duration: 0.3,
-                              options: .transitionCrossDissolve,
+                              options: transition,
                               animations: {
-                                self.image = img
+                                if onSuccess == nil {
+                                    self.image = img
+                                } else {
+                                    onSuccess?(img)
+                                }
                                 
             }, completion: nil)
             return nil
@@ -60,7 +64,9 @@ public extension UIImageView {
                                 return
                             }
                             
-                            if  let resizedImage = image.compress(toWidth: widthTarget),
+                            var renderedImage: UIImage = image
+                            
+                            if  let resizedImage = renderedImage.compress(toWidth: widthTarget),
                                 let data = resizedImage.pngData() {
                                 Valley.cache.add(data,
                                                  for: identifier,
@@ -68,10 +74,13 @@ public extension UIImageView {
                                 DispatchQueue.main.async {
                                     UIView.transition(with: self,
                                                       duration: 0.3,
-                                                      options: .transitionCrossDissolve,
+                                                      options: transition,
                                                       animations: {
-                                                        self.image = resizedImage
-                                                        onSuccess?(image)
+                                                        if onSuccess == nil {
+                                                            self.image = resizedImage
+                                                        } else {
+                                                            onSuccess?(resizedImage)
+                                                        }
                                     }, completion: nil)
                                 }
                             }

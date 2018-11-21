@@ -26,7 +26,7 @@ class ValleyDownloaderTests: XCTestCase {
         // Check if there's not image set
         XCTAssertNil(self.imageView.image)
         imageView.valleyImage(url: url, onSuccess: { (image) in
-            XCTAssertNotNil(self.imageView.image)
+            XCTAssertNil(self.imageView.image)
             XCTAssertNotNil(image)
             expectation.fulfill()
         })

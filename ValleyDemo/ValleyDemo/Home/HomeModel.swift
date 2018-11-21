@@ -30,6 +30,8 @@ class HomeModel: NSObject {
                     self?.source.append(HomeItem(id: id, imageUrl: url))
                 }
             }
+            
+            self?.source.append(HomeItem(id: "abc", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/41/Wilber-huge-alpha.png"))
             self?.delegate?.refreshData()
         }) { [weak self] (error) -> (Void) in
             if let error = error {
