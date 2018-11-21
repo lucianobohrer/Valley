@@ -25,7 +25,7 @@ class HomeModel: NSObject {
             
             for item in items {
                 if  let urls = item["urls"] as? [String: Any],
-                    let url = urls["regular"] as? String,
+                    let url = urls["full"] as? String,
                     let id = item ["id"] as? String {
                     self?.source.append(HomeItem(id: id, imageUrl: url))
                 }

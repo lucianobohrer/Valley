@@ -19,6 +19,17 @@
 		AD42477A216E77B400BDDB98 /* json-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = AD424776216E77B400BDDB98 /* json-sample.json */; };
 		AD42477D216E77D500BDDB98 /* ValleyCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD42477B216E77D500BDDB98 /* ValleyCacheTests.swift */; };
 		AD42477E216E77D500BDDB98 /* ValleyDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD42477C216E77D500BDDB98 /* ValleyDownloaderTests.swift */; };
+		ADE3878221A5C0A200A31BFA /* UIImage+Valley.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3878121A5C0A200A31BFA /* UIImage+Valley.swift */; };
+		ADE3879821A5C8F900A31BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE3879621A5C8F900A31BFA /* LaunchScreen.storyboard */; };
+		ADE3879E21A5C91100A31BFA /* Valley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2409B12169376900BEF7CB /* Valley.framework */; };
+		ADE387A721A5C93D00A31BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3879F21A5C93D00A31BFA /* AppDelegate.swift */; };
+		ADE387A821A5C93D00A31BFA /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE387A121A5C93D00A31BFA /* HomeItem.swift */; };
+		ADE387A921A5C93D00A31BFA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE387A221A5C93D00A31BFA /* HomeViewController.swift */; };
+		ADE387AA21A5C93D00A31BFA /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE387A321A5C93D00A31BFA /* CardCollectionViewCell.xib */; };
+		ADE387AB21A5C93D00A31BFA /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE387A421A5C93D00A31BFA /* HomeModel.swift */; };
+		ADE387AC21A5C93D00A31BFA /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE387A521A5C93D00A31BFA /* CardCollectionViewCell.swift */; };
+		ADE387AD21A5C93D00A31BFA /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE387A621A5C93D00A31BFA /* Endpoints.swift */; };
+		ADE387AF21A5C98300A31BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE387AE21A5C98300A31BFA /* Main.storyboard */; };
 		ADE7FD37216B1995003E1368 /* ValleyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7FD36216B1995003E1368 /* ValleyFile.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +57,18 @@
 		AD424776216E77B400BDDB98 /* json-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "json-sample.json"; sourceTree = "<group>"; };
 		AD42477B216E77D500BDDB98 /* ValleyCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyCacheTests.swift; sourceTree = "<group>"; };
 		AD42477C216E77D500BDDB98 /* ValleyDownloaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValleyDownloaderTests.swift; sourceTree = "<group>"; };
+		ADE3878121A5C0A200A31BFA /* UIImage+Valley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Valley.swift"; sourceTree = "<group>"; };
+		ADE3878B21A5C8F700A31BFA /* ValleyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValleyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE3879721A5C8F900A31BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADE3879921A5C8F900A31BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE3879F21A5C93D00A31BFA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ValleyDemo/Application/AppDelegate.swift; sourceTree = "<group>"; };
+		ADE387A121A5C93D00A31BFA /* HomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		ADE387A221A5C93D00A31BFA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ADE387A321A5C93D00A31BFA /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		ADE387A421A5C93D00A31BFA /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		ADE387A521A5C93D00A31BFA /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADE387A621A5C93D00A31BFA /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = ValleyDemo/Application/Endpoints.swift; sourceTree = "<group>"; };
+		ADE387AE21A5C98300A31BFA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ValleyDemo/Main.storyboard; sourceTree = "<group>"; };
 		ADE7FD36216B1995003E1368 /* ValleyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADE3878821A5C8F700A31BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE3879E21A5C91100A31BFA /* Valley.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,7 +104,9 @@
 			children = (
 				AD2409B32169376900BEF7CB /* Valley */,
 				AD42476A216E766E00BDDB98 /* ValleyTests */,
+				ADE3878C21A5C8F700A31BFA /* ValleyDemo */,
 				AD2409B22169376900BEF7CB /* Products */,
+				ADE3879D21A5C91100A31BFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +115,7 @@
 			children = (
 				AD2409B12169376900BEF7CB /* Valley.framework */,
 				AD424769216E766E00BDDB98 /* ValleyTests.xctest */,
+				ADE3878B21A5C8F700A31BFA /* ValleyDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,9 +141,9 @@
 		AD2409E821694AEB00BEF7CB /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ADE3878021A5C06F00A31BFA /* Extensions */,
 				AD2409F2216953A500BEF7CB /* Valley.swift */,
 				AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */,
-				AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */,
 				ADE7FD36216B1995003E1368 /* ValleyFile.swift */,
 				AD2409E921694B2700BEF7CB /* ValleyCache.swift */,
 			);
@@ -134,6 +168,48 @@
 				AD424776216E77B400BDDB98 /* json-sample.json */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		ADE3878021A5C06F00A31BFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD2409F0216952C900BEF7CB /* UIImageView+Valley.swift */,
+				ADE3878121A5C0A200A31BFA /* UIImage+Valley.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADE3878C21A5C8F700A31BFA /* ValleyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3879621A5C8F900A31BFA /* LaunchScreen.storyboard */,
+				ADE3879F21A5C93D00A31BFA /* AppDelegate.swift */,
+				ADE387A621A5C93D00A31BFA /* Endpoints.swift */,
+				ADE387A021A5C93D00A31BFA /* Home */,
+				ADE387AE21A5C98300A31BFA /* Main.storyboard */,
+				ADE3879921A5C8F900A31BFA /* Info.plist */,
+			);
+			path = ValleyDemo;
+			sourceTree = "<group>";
+		};
+		ADE3879D21A5C91100A31BFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADE387A021A5C93D00A31BFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ADE387A121A5C93D00A31BFA /* HomeItem.swift */,
+				ADE387A221A5C93D00A31BFA /* HomeViewController.swift */,
+				ADE387A321A5C93D00A31BFA /* CardCollectionViewCell.xib */,
+				ADE387A421A5C93D00A31BFA /* HomeModel.swift */,
+				ADE387A521A5C93D00A31BFA /* CardCollectionViewCell.swift */,
+			);
+			name = Home;
+			path = ValleyDemo/Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +262,23 @@
 			productReference = AD424769216E766E00BDDB98 /* ValleyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ADE3878A21A5C8F700A31BFA /* ValleyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE3879C21A5C8F900A31BFA /* Build configuration list for PBXNativeTarget "ValleyDemo" */;
+			buildPhases = (
+				ADE3878721A5C8F700A31BFA /* Sources */,
+				ADE3878821A5C8F700A31BFA /* Frameworks */,
+				ADE3878921A5C8F700A31BFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ValleyDemo;
+			productName = ValleyDemo;
+			productReference = ADE3878B21A5C8F700A31BFA /* ValleyDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +294,10 @@
 						LastSwiftMigration = 1000;
 					};
 					AD424768216E766E00BDDB98 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					ADE3878A21A5C8F700A31BFA = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
 					};
@@ -220,6 +317,7 @@
 			projectRoot = "";
 			targets = (
 				AD2409B02169376900BEF7CB /* Valley */,
+				ADE3878A21A5C8F700A31BFA /* ValleyDemo */,
 				AD424768216E766E00BDDB98 /* ValleyTests */,
 			);
 		};
@@ -244,6 +342,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADE3878921A5C8F700A31BFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE387AF21A5C98300A31BFA /* Main.storyboard in Resources */,
+				ADE387AA21A5C93D00A31BFA /* CardCollectionViewCell.xib in Resources */,
+				ADE3879821A5C8F900A31BFA /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -255,6 +363,7 @@
 				AD2409F3216953A500BEF7CB /* Valley.swift in Sources */,
 				AD2409EF2169526000BEF7CB /* ValleyDownloader.swift in Sources */,
 				AD2409F1216952C900BEF7CB /* UIImageView+Valley.swift in Sources */,
+				ADE3878221A5C0A200A31BFA /* UIImage+Valley.swift in Sources */,
 				ADE7FD37216B1995003E1368 /* ValleyFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +377,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADE3878721A5C8F700A31BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE387AB21A5C93D00A31BFA /* HomeModel.swift in Sources */,
+				ADE387A721A5C93D00A31BFA /* AppDelegate.swift in Sources */,
+				ADE387A821A5C93D00A31BFA /* HomeItem.swift in Sources */,
+				ADE387AC21A5C93D00A31BFA /* CardCollectionViewCell.swift in Sources */,
+				ADE387AD21A5C93D00A31BFA /* Endpoints.swift in Sources */,
+				ADE387A921A5C93D00A31BFA /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -277,6 +399,17 @@
 			targetProxy = AD42476F216E766E00BDDB98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADE3879621A5C8F900A31BFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE3879721A5C8F900A31BFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AD2409C32169376900BEF7CB /* Debug */ = {
@@ -501,6 +634,47 @@
 			};
 			name = Release;
 		};
+		ADE3879A21A5C8F900A31BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9EPMQT7JV;
+				INFOPLIST_FILE = ValleyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.ValleyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADE3879B21A5C8F900A31BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9EPMQT7JV;
+				INFOPLIST_FILE = ValleyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = work.luciano.ValleyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,6 +701,15 @@
 			buildConfigurations = (
 				AD424772216E766E00BDDB98 /* Debug */,
 				AD424773216E766E00BDDB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADE3879C21A5C8F900A31BFA /* Build configuration list for PBXNativeTarget "ValleyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE3879A21A5C8F900A31BFA /* Debug */,
+				ADE3879B21A5C8F900A31BFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

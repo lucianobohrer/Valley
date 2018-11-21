@@ -33,13 +33,13 @@ public extension UIImageView {
                             onSuccess: ((UIImage) -> Void)? = nil,
                             onError: ((ValleyError?) -> Void)? = nil) -> URLSessionTask? {
         self.image = placeholder
-        
+        let widthTarget = self.frame.width
+        let identifier =  "\(urlString)\(widthTarget)"
         var rawData: Any?
         
-        Valley.cache.value(for: urlString) { (item) in
+        Valley.cache.value(for: identifier) { (item) in
             rawData = item
         }
-        
         
         if let value = rawData as? Data, let img = UIImage(data: value) {
             UIView.transition(with: self,
@@ -50,33 +50,37 @@ public extension UIImageView {
                                 
             }, completion: nil)
             return nil
-        }
-        
-        let task = ValleyDownloader<UIImage>
-            .request(urlString: urlString,
-                     onError: onError) { [weak self] (image, size) -> (Void) in
-                        guard let `self` = self else {
-                            onError?(.generic)
-                            return
-                        }
-                        if let data = image.pngData(){
-                            Valley.cache.add(data,
-                                             for: urlString,
-                                             cost: size)
-                            DispatchQueue.main.async {
-                                UIView.transition(with: self,
-                                                  duration: 0.3,
-                                                  options: .transitionCrossDissolve,
-                                                  animations: {
-                                                    self.image = image
-                                                    onSuccess?(image)
-                                }, completion: nil)
+        } else {
+            
+            let task = ValleyDownloader<UIImage>
+                .request(urlString: urlString,
+                         onError: onError) { [weak self] (image, size) -> (Void) in
+                            guard let `self` = self else {
+                                onError?(.generic)
+                                return
                             }
-                        }
+                            
+                            if  let resizedImage = image.compress(toWidth: widthTarget),
+                                let data = resizedImage.pngData() {
+                                Valley.cache.add(data,
+                                                 for: identifier,
+                                                 cost: data.count)
+                                DispatchQueue.main.async {
+                                    UIView.transition(with: self,
+                                                      duration: 0.3,
+                                                      options: .transitionCrossDissolve,
+                                                      animations: {
+                                                        self.image = resizedImage
+                                                        onSuccess?(image)
+                                    }, completion: nil)
+                                }
+                            }
+            }
+         
+            defer {
+                task?.resume()
+            }
+            return task
         }
-        defer {
-            task?.resume()
-        }
-        return task
     }
 }

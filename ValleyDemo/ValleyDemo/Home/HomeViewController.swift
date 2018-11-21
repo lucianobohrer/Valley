@@ -71,6 +71,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
 // MARK: - Home delegates
 extension HomeViewController: HomeDelegates {
+    
     func refreshData() {
         self.collectionView.reloadData()
     }
