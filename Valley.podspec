@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.summary               = 'A simple loading and caching system for Images, Data and JSONS'
 
   # 2
-  s.version = '1.1.4'
+  s.version = '1.2.0'
   
   # 3
   s.license   = { :type => 'MIT', :file => "LICENSE" }

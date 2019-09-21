@@ -7,5 +7,5 @@
 //
 
 enum Endpoints: String {
-    case home = "https://pastebin.com/raw/wgkJgazE"
+    case home = "https://gist.githubusercontent.com/lucianobohrer/411ab28547f1d24c3106971fb3861825/raw/00c8f01d6080ccf1a243103f0c59a6f53f552bd7/Valley-images"
 }

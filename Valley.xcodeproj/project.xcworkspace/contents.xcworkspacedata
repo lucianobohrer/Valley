@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Valley.xcodeproj">
+      location = "group:/Users/lucianoacosta/Development/mobile/ios/Valley/ValleyDemo/wikimedia.org.der">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

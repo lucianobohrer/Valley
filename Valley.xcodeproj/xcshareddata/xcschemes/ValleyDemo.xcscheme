@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD2409B02169376900BEF7CB"
-               BuildableName = "Valley.framework"
-               BlueprintName = "Valley"
+               BlueprintIdentifier = "ADE3878A21A5C8F700A31BFA"
+               BuildableName = "ValleyDemo.app"
+               BlueprintName = "ValleyDemo"
                ReferencedContainer = "container:Valley.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,36 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD2409B02169376900BEF7CB"
-            BuildableName = "Valley.framework"
-            BlueprintName = "Valley"
-            ReferencedContainer = "container:Valley.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD424768216E766E00BDDB98"
-               BuildableName = "ValleyTests.xctest"
-               BlueprintName = "ValleyTests"
-               ReferencedContainer = "container:Valley.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD2409B02169376900BEF7CB"
-            BuildableName = "Valley.framework"
-            BlueprintName = "Valley"
+            BlueprintIdentifier = "ADE3878A21A5C8F700A31BFA"
+            BuildableName = "ValleyDemo.app"
+            BlueprintName = "ValleyDemo"
             ReferencedContainer = "container:Valley.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,20 +51,21 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD2409B02169376900BEF7CB"
-            BuildableName = "Valley.framework"
-            BlueprintName = "Valley"
+            BlueprintIdentifier = "ADE3878A21A5C8F700A31BFA"
+            BuildableName = "ValleyDemo.app"
+            BlueprintName = "ValleyDemo"
             ReferencedContainer = "container:Valley.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"
             value = "disable"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>
@@ -97,15 +77,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD2409B02169376900BEF7CB"
-            BuildableName = "Valley.framework"
-            BlueprintName = "Valley"
+            BlueprintIdentifier = "ADE3878A21A5C8F700A31BFA"
+            BuildableName = "ValleyDemo.app"
+            BlueprintName = "ValleyDemo"
             ReferencedContainer = "container:Valley.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
