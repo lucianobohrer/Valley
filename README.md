@@ -18,6 +18,7 @@
 - [x] Improve cache item size
 - [ ] New extensions (e.g. WKWebView)
 - [x] Travis integration
+- [x] SSL Pinning option
 ## Setup
 
 #### Setup with CocoaPods (iOS 10+)
