@@ -34,8 +34,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        var certsData: [Data]?
+        Valley.cache.clearCache()
         
-        Valley.setup(capacityInBytes: 5 * 1024 * 1024)
+        if  let unsPlashCert = Bundle.main.url(forResource: "imgur.com", withExtension: "der"),
+            let gitCert = Bundle.main.url(forResource: "gist.githubusercontent.com", withExtension: "der"),
+            let cert1 = try? Data(contentsOf: unsPlashCert),
+            let cert2 = try? Data(contentsOf: gitCert) {
+            certsData = [cert1, cert2]
+        }
+        
+        Valley.setup(capacityInBytes: 5 * 1024 * 1024, pinningCertificate: certsData)
         model.refreshData(page: 0)
     }
     

@@ -14,7 +14,7 @@ import Foundation
  */
 
 // MARK: - Class
-internal final class ValleyDownloader<T> {
+internal final class ValleyDownloader<T>: NSObject, URLSessionDelegate {
     
     // MARK: Static methods
     
@@ -31,8 +31,15 @@ internal final class ValleyDownloader<T> {
             onError?(.invalidUrl)
             return nil
         }
+        print(url)
+        let configuration = URLSessionConfiguration.default
+        let delegate = ValleyPinning()
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
+        let session = URLSession(configuration: configuration,
+                                 delegate: delegate,
+                                 delegateQueue:OperationQueue.main)
+        
+        let task = session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
             guard let data = data, error == nil else {
                 onError?(.generic)
                 return
@@ -45,6 +52,7 @@ internal final class ValleyDownloader<T> {
                 onError?(.invalidParse)
             }
         }
+
         return task
     }
     
@@ -66,7 +74,7 @@ internal final class ValleyDownloader<T> {
     }
 }
 
-// MARK: Errors definition
+// MARK: - Errors definition
 public enum ValleyError: String, Swift.Error {
     case generic = "Unexpected error ocurred"
     case invalidParse = "Error parsing data to file type"

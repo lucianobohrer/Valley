@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4BA6482336A23C0013F7AB /* ValleyPinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BA6472336A23C0013F7AB /* ValleyPinning.swift */; };
+		1E4BA6502336B0DA0013F7AB /* gist.githubusercontent.com.der in Resources */ = {isa = PBXBuildFile; fileRef = 1E4BA64F2336B0D90013F7AB /* gist.githubusercontent.com.der */; };
+		1E4BA6562336B70A0013F7AB /* imgur.com.der in Resources */ = {isa = PBXBuildFile; fileRef = 1E4BA6552336B70A0013F7AB /* imgur.com.der */; };
 		AD2409C22169376900BEF7CB /* Valley.h in Headers */ = {isa = PBXBuildFile; fileRef = AD2409B42169376900BEF7CB /* Valley.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409E921694B2700BEF7CB /* ValleyCache.swift */; };
 		AD2409EF2169526000BEF7CB /* ValleyDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E4BA6472336A23C0013F7AB /* ValleyPinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValleyPinning.swift; sourceTree = "<group>"; };
+		1E4BA64F2336B0D90013F7AB /* gist.githubusercontent.com.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = gist.githubusercontent.com.der; sourceTree = "<group>"; };
+		1E4BA6552336B70A0013F7AB /* imgur.com.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = imgur.com.der; sourceTree = "<group>"; };
 		AD2409B12169376900BEF7CB /* Valley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2409B42169376900BEF7CB /* Valley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Valley.h; sourceTree = "<group>"; };
 		AD2409B52169376900BEF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 				AD2409EE2169522D00BEF7CB /* ValleyDownloader.swift */,
 				ADE7FD36216B1995003E1368 /* ValleyFile.swift */,
 				AD2409E921694B2700BEF7CB /* ValleyCache.swift */,
+				1E4BA6472336A23C0013F7AB /* ValleyPinning.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -187,6 +194,8 @@
 				ADE387A621A5C93D00A31BFA /* Endpoints.swift */,
 				ADE387A021A5C93D00A31BFA /* Home */,
 				ADE387AE21A5C98300A31BFA /* Main.storyboard */,
+				1E4BA64F2336B0D90013F7AB /* gist.githubusercontent.com.der */,
+				1E4BA6552336B70A0013F7AB /* imgur.com.der */,
 				ADE3879921A5C8F900A31BFA /* Info.plist */,
 			);
 			path = ValleyDemo;
@@ -286,7 +295,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Luciano Bohrer";
 				TargetAttributes = {
 					AD2409B02169376900BEF7CB = {
@@ -348,7 +357,9 @@
 			files = (
 				ADE387AF21A5C98300A31BFA /* Main.storyboard in Resources */,
 				ADE387AA21A5C93D00A31BFA /* CardCollectionViewCell.xib in Resources */,
+				1E4BA6502336B0DA0013F7AB /* gist.githubusercontent.com.der in Resources */,
 				ADE3879821A5C8F900A31BFA /* LaunchScreen.storyboard in Resources */,
+				1E4BA6562336B70A0013F7AB /* imgur.com.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD2409EA21694B2700BEF7CB /* ValleyCache.swift in Sources */,
+				1E4BA6482336A23C0013F7AB /* ValleyPinning.swift in Sources */,
 				AD2409F3216953A500BEF7CB /* Valley.swift in Sources */,
 				AD2409EF2169526000BEF7CB /* ValleyDownloader.swift in Sources */,
 				AD2409F1216952C900BEF7CB /* UIImageView+Valley.swift in Sources */,
@@ -538,7 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
@@ -567,7 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;

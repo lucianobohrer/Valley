@@ -27,7 +27,7 @@ public extension UIImageView {
      - parameter onError: Closure triggered when an error has occurred
     */
     @discardableResult
-    public func valleyImage(url urlString: String,
+    func valleyImage(url urlString: String,
                             placeholder: UIImage? = nil,
                             transition: AnimationOptions = .transitionCrossDissolve,
                             onSuccess: ((UIImage) -> Void)? = nil,
